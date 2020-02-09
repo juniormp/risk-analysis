@@ -1,10 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="baf51114-178d-4787-aeda-f9a93db2f65f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/application/use_case/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/application/use_case/risk_analysis_use_case.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/house.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/person.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/unit_test/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/unit_test/web/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/unit_test/web/view/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/unit_test/web/view/test_user_information_serializer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/serializer/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/serializer/user_information_serializer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/view/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/web/view/risk_analysis_view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/risk_analysis/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/risk_analysis/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/risk_analysis/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/risk_analysis/urls.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1XYLK2ZrVacOq5cwNSoCO2tQycN" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RunManager">
     <configuration name="risk_analysis" type="Python.DjangoServer" factoryName="Django server">
@@ -30,5 +66,37 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <servers />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser" timestamp="1581275860147">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581275860147" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1581275970657">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581275970657" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/risk_analysis/urls.py</url>
+          <line>14</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/unit_test/web/view/test_user_information_serializer.py</url>
+          <line>11</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
