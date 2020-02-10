@@ -1,5 +1,8 @@
 from domain.entity.asset import Asset
 
+OWNERSHIP_STATUS_MORTGAGED = 'mortgaged'
+OWNERSHIP_STATUS_OWNED = 'owned'
+
 
 class House(Asset):
     ownership_status = None
