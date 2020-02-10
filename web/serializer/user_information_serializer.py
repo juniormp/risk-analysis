@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from domain.person import MARITAL_STATUS
+from domain.entity.person import MARITAL_STATUS
 
 
 class UserInformationSerializer(serializers.Serializer):

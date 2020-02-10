@@ -2,26 +2,40 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="baf51114-178d-4787-aeda-f9a93db2f65f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/application/use_case/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/application/use_case/risk_analysis_use_case.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/house.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/person.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit_test/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit_test/web/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit_test/web/view/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit_test/web/view/test_user_information_serializer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/serializer/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/serializer/user_information_serializer.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/view/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/web/view/risk_analysis_view.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/entity/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/entity/asset.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/entity/house.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/entity/product/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/entity/product/disability_product.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/entity/product/home_product.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/entity/product/life_product.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/entity/product/product.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/entity/product/vehicle_product.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/entity/risk_analysis.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/entity/risk_profile.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/entity/risk_score.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/entity/vehicle.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/factory/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/factory/risk_analysis_factory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/unit_test/domain/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/unit_test/domain/factory/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/unit_test/domain/factory/test_risk_analysis_factory.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/application/use_case/risk_analysis_use_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/application/use_case/risk_analysis_use_case.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/person.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/entity/person.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/risk_analysis/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/risk_analysis/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/risk_analysis/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/risk_analysis/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit_test/web/view/test_user_information_serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit_test/web/view/test_user_information_serializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/serializer/user_information_serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/serializer/user_information_serializer.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/view/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/view/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/web/view/risk_analysis_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/view/risk_analysis_view.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DjangoConsoleOptions" custom-start-script="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)">
+    <option name="myCustomStartScript" value="import sys; print('Python %s on %s' % (sys.version, sys.platform))&#10;import django; print('Django %s' % django.get_version())&#10;sys.path.extend([WORKING_DIR_AND_PYTHON_PATHS])&#10;if 'setup' in dir(django): django.setup()&#10;import django_manage_shell; django_manage_shell.run(PROJECT_ROOT)" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -38,11 +52,41 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/domain/entity/product" />
     <property name="node.js.path.for.package.tslint" value="project" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/domain/entity/product" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/domain/entity/product" />
+      <recent name="$PROJECT_DIR$/application" />
+      <recent name="$PROJECT_DIR$/domain/entity" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Django tests.Test: tests.unit_test.domain.factory.test_risk_analysis_factory.TestRiskAnalysisFactory.test_create_risk_analysis">
+    <configuration name="Test: tests.unit_test.domain.factory.test_risk_analysis_factory.TestRiskAnalysisFactory.test_create_risk_analysis" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="risk_analysis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="tests.unit_test.domain.factory.test_risk_analysis_factory.TestRiskAnalysisFactory.test_create_risk_analysis" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="risk_analysis" type="Python.DjangoServer" factoryName="Django server">
       <module name="risk_analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -66,6 +110,11 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Django tests.Test: tests.unit_test.domain.factory.test_risk_analysis_factory.TestRiskAnalysisFactory.test_create_risk_analysis" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -74,14 +123,58 @@
     <servers />
   </component>
   <component name="WindowStateProjectService">
+    <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581293586225">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581293586225" />
     <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser" timestamp="1581275860147">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581275860147" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1581275970657">
+    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581287817605">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581275970657" />
+    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581287817605" />
+    <state width="906" height="466" key="DebuggerActiveHint" timestamp="1581300120621">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="906" height="466" key="DebuggerActiveHint/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581300120621" />
+    <state width="1638" height="428" key="GridCell.Tab.0.bottom" timestamp="1581301537528">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="428" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581301537528" />
+    <state width="1638" height="428" key="GridCell.Tab.0.center" timestamp="1581301537526">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="428" key="GridCell.Tab.0.center/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581301537526" />
+    <state width="1638" height="428" key="GridCell.Tab.0.left" timestamp="1581301537525">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="428" key="GridCell.Tab.0.left/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581301537525" />
+    <state width="1638" height="428" key="GridCell.Tab.0.right" timestamp="1581301537527">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="428" key="GridCell.Tab.0.right/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581301537527" />
+    <state width="1638" height="363" key="GridCell.Tab.1.bottom" timestamp="1581300233995">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="363" key="GridCell.Tab.1.bottom/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581300233995" />
+    <state width="1638" height="363" key="GridCell.Tab.1.center" timestamp="1581300233994">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="363" key="GridCell.Tab.1.center/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581300233994" />
+    <state width="1638" height="363" key="GridCell.Tab.1.left" timestamp="1581300233993">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="363" key="GridCell.Tab.1.left/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581300233993" />
+    <state width="1638" height="363" key="GridCell.Tab.1.right" timestamp="1581300233994">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state width="1638" height="363" key="GridCell.Tab.1.right/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581300233994" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1581293482490">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581293482490" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -91,12 +184,10 @@
           <line>14</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/tests/unit_test/web/view/test_user_information_serializer.py</url>
-          <line>11</line>
-          <option name="timeStamp" value="2" />
-        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_factory_test_risk_analysis_factory_TestRiskAnalysisFactory_test_create_risk_analysis.coverage" NAME="Test: tests.unit_test.domain.factory.test_risk_analysis_factory.TestRiskAnalysisFactory.test_create_risk_analysis Coverage Results" MODIFIED="1581301537516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

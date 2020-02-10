@@ -1,7 +1,6 @@
-from web.serializer.user_information_serializer import UserInformationSerializer
+import array as array
+from domain.factory.risk_analysis_factory import RiskAnalysisFactory
 
 
 class RiskAnalysisUseCase:
-    def execute(self, request):
-        risk_analysis = UserInformationSerializer(data=request.data)
-        return [risk_analysis.is_valid(), risk_analysis.data]
+    risk_analysis_factory = None
