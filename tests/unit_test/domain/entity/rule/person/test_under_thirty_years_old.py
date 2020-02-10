@@ -19,7 +19,7 @@ class TestUnderThirtyYearsOld(TestCase):
 
         self.assertTrue(response)
 
-    def test_is_falsely_when_person_is_not_under_thirty_years_old(self):
+    def test_is_falsely_when_person_is_over_thirty_years_old(self):
         rule = UnderThirtyYearsOld()
         person = Person(
             income=None,
