@@ -1,6 +1,6 @@
-from collections import Counter
-
-MARITAL_STATUS = ['single', 'married']
+MARITAL_STATUS_MARRIED = 'married'
+MARITAL_STATUS_SINGLE = 'single'
+MARITAL_STATUS = [MARITAL_STATUS_SINGLE, MARITAL_STATUS_MARRIED]
 
 
 class Person:
