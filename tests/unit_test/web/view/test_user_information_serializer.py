@@ -19,6 +19,5 @@ class TestUserInformationSerializer(TestCase):
         expected_fields = {'age', 'dependents', 'risk_question', 'income', 'marital_status'}
 
         user_information_data = self.user_information_serializer.data
-        print(user_information_data)
 
         self.assertEqual(set(user_information_data.keys()), expected_fields)

@@ -1,5 +1,4 @@
 from django.test import TestCase
-
 from domain.entity.house import House
 from domain.entity.product.disability_product import DisabilityProduct
 from domain.entity.product.home_product import HomeProduct

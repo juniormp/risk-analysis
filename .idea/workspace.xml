@@ -2,32 +2,22 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="baf51114-178d-4787-aeda-f9a93db2f65f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/domain/entity/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/entity/asset.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/entity/house.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/entity/product/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/entity/product/disability_product.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/entity/product/home_product.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/entity/product/life_product.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/entity/product/product.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/entity/product/vehicle_product.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/entity/risk_analysis.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/entity/risk_profile.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/entity/risk_score.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/entity/vehicle.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/factory/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/factory/risk_analysis_factory.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit_test/domain/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit_test/domain/factory/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit_test/domain/factory/test_risk_analysis_factory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/entity/rule/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/entity/rule/person/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/entity/rule/person/has_income.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/entity/rule/person_rules.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/factory/risk_analysis_rules_factory.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/service/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/domain/service/risk_analysis_service.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/unit_test/domain/entity/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/unit_test/domain/entity/rule/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/unit_test/domain/entity/rule/person/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/unit_test/domain/entity/rule/person/test_has_income.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/unit_test/domain/entity/rule/test_person_rules.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/unit_test/domain/factory/test_risk_analysis_rules_factory.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/application/use_case/risk_analysis_use_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/application/use_case/risk_analysis_use_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/domain/person.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/entity/person.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/risk_analysis/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/risk_analysis/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit_test/web/view/test_user_information_serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit_test/web/view/test_user_information_serializer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/serializer/user_information_serializer.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/serializer/user_information_serializer.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/view/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/view/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/web/view/risk_analysis_view.py" beforeDir="false" afterPath="$PROJECT_DIR$/web/view/risk_analysis_view.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit_test/domain/factory/test_risk_analysis_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit_test/domain/factory/test_risk_analysis_factory.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,25 +39,33 @@
   </component>
   <component name="ProjectId" id="1XYLK2ZrVacOq5cwNSoCO2tQycN" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/domain/entity/product" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/domain/entity/product" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/domain/entity/product" />
       <recent name="$PROJECT_DIR$/application" />
       <recent name="$PROJECT_DIR$/domain/entity" />
     </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/domain/entity/product" />
+    </key>
   </component>
-  <component name="RunManager" selected="Django tests.Test: tests.unit_test.domain.factory.test_risk_analysis_factory.TestRiskAnalysisFactory.test_create_risk_analysis">
-    <configuration name="Test: tests.unit_test.domain.factory.test_risk_analysis_factory.TestRiskAnalysisFactory.test_create_risk_analysis" type="DjangoTestsConfigurationType" temporary="true">
+  <component name="RunManager" selected="Django tests.Test: tests.unit_test.domain.factory.test_risk_analysis_rules_factory.TestRiskAnalysisRulesFactory.test_retrieve_persons_rules_list">
+    <configuration name="Test: tests.unit_test.domain.entity.rule.person.test_has_income.TestHasIncome" type="DjangoTestsConfigurationType" temporary="true">
       <module name="risk_analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -80,7 +78,67 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="tests.unit_test.domain.factory.test_risk_analysis_factory.TestRiskAnalysisFactory.test_create_risk_analysis" />
+      <option name="TARGET" value="tests.unit_test.domain.entity.rule.person.test_has_income.TestHasIncome" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: tests.unit_test.domain.entity.rule.test_person_rules.TestPersonRules" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="risk_analysis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="tests.unit_test.domain.entity.rule.test_person_rules.TestPersonRules" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: tests.unit_test.domain.entity.rule.test_person_rules.TestPersonRules.test_return_the_list_of_persons_rules" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="risk_analysis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="tests.unit_test.domain.entity.rule.test_person_rules.TestPersonRules.test_return_the_list_of_persons_rules" />
+      <option name="SETTINGS_FILE" value="" />
+      <option name="CUSTOM_SETTINGS" value="false" />
+      <option name="USE_OPTIONS" value="false" />
+      <option name="OPTIONS" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Test: tests.unit_test.domain.factory.test_risk_analysis_rules_factory.TestRiskAnalysisRulesFactory.test_retrieve_persons_rules_list" type="DjangoTestsConfigurationType" temporary="true">
+      <module name="risk_analysis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="TARGET" value="tests.unit_test.domain.factory.test_risk_analysis_rules_factory.TestRiskAnalysisRulesFactory.test_retrieve_persons_rules_list" />
       <option name="SETTINGS_FILE" value="" />
       <option name="CUSTOM_SETTINGS" value="false" />
       <option name="USE_OPTIONS" value="false" />
@@ -110,9 +168,28 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Unittests for test_risk_analysis_rules_factory.TestRiskAnalysisRulesFactory" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="risk_analysis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/unit_test/domain/factory" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_risk_analysis_rules_factory.TestRiskAnalysisRulesFactory&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Django tests.Test: tests.unit_test.domain.factory.test_risk_analysis_factory.TestRiskAnalysisFactory.test_create_risk_analysis" />
+        <item itemvalue="Django tests.Test: tests.unit_test.domain.factory.test_risk_analysis_rules_factory.TestRiskAnalysisRulesFactory.test_retrieve_persons_rules_list" />
+        <item itemvalue="Python tests.Unittests for test_risk_analysis_rules_factory.TestRiskAnalysisRulesFactory" />
+        <item itemvalue="Django tests.Test: tests.unit_test.domain.entity.rule.test_person_rules.TestPersonRules.test_return_the_list_of_persons_rules" />
+        <item itemvalue="Django tests.Test: tests.unit_test.domain.entity.rule.test_person_rules.TestPersonRules" />
+        <item itemvalue="Django tests.Test: tests.unit_test.domain.entity.rule.person.test_has_income.TestHasIncome" />
       </list>
     </recent_temporary>
   </component>
@@ -120,7 +197,18 @@
     <configuration />
   </component>
   <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="baf51114-178d-4787-aeda-f9a93db2f65f" name="Default Changelist" comment="" />
+      <created>1581336755434</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1581336755434</updated>
+      <workItem from="1581336756791" duration="16446000" />
+    </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
     <state x="304" y="187" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1581293586225">
@@ -131,50 +219,50 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="653" y="248" key="#com.intellij.ide.util.MemberChooser/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581275860147" />
-    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581287817605">
+    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog" timestamp="1581340165078">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581287817605" />
-    <state width="906" height="466" key="DebuggerActiveHint" timestamp="1581300120621">
+    <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581340165078" />
+    <state width="1110" height="466" key="DebuggerActiveHint" timestamp="1581358871877">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="906" height="466" key="DebuggerActiveHint/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581300120621" />
-    <state width="1638" height="428" key="GridCell.Tab.0.bottom" timestamp="1581301537528">
+    <state width="1110" height="466" key="DebuggerActiveHint/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581358871877" />
+    <state width="1638" height="249" key="GridCell.Tab.0.bottom" timestamp="1581364110066">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="428" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581301537528" />
-    <state width="1638" height="428" key="GridCell.Tab.0.center" timestamp="1581301537526">
+    <state width="1638" height="249" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581364110066" />
+    <state width="1638" height="249" key="GridCell.Tab.0.center" timestamp="1581364110065">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="428" key="GridCell.Tab.0.center/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581301537526" />
-    <state width="1638" height="428" key="GridCell.Tab.0.left" timestamp="1581301537525">
+    <state width="1638" height="249" key="GridCell.Tab.0.center/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581364110065" />
+    <state width="1638" height="249" key="GridCell.Tab.0.left" timestamp="1581364110063">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="428" key="GridCell.Tab.0.left/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581301537525" />
-    <state width="1638" height="428" key="GridCell.Tab.0.right" timestamp="1581301537527">
+    <state width="1638" height="249" key="GridCell.Tab.0.left/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581364110063" />
+    <state width="1638" height="249" key="GridCell.Tab.0.right" timestamp="1581364110066">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="428" key="GridCell.Tab.0.right/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581301537527" />
-    <state width="1638" height="363" key="GridCell.Tab.1.bottom" timestamp="1581300233995">
+    <state width="1638" height="249" key="GridCell.Tab.0.right/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581364110066" />
+    <state width="1638" height="216" key="GridCell.Tab.1.bottom" timestamp="1581363952430">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.bottom/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581300233995" />
-    <state width="1638" height="363" key="GridCell.Tab.1.center" timestamp="1581300233994">
+    <state width="1638" height="216" key="GridCell.Tab.1.bottom/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581363952430" />
+    <state width="1638" height="216" key="GridCell.Tab.1.center" timestamp="1581363952429">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.center/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581300233994" />
-    <state width="1638" height="363" key="GridCell.Tab.1.left" timestamp="1581300233993">
+    <state width="1638" height="216" key="GridCell.Tab.1.center/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581363952429" />
+    <state width="1638" height="216" key="GridCell.Tab.1.left" timestamp="1581363952428">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.left/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581300233993" />
-    <state width="1638" height="363" key="GridCell.Tab.1.right" timestamp="1581300233994">
+    <state width="1638" height="216" key="GridCell.Tab.1.left/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581363952428" />
+    <state width="1638" height="216" key="GridCell.Tab.1.right" timestamp="1581363952429">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="363" key="GridCell.Tab.1.right/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581300233994" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1581293482490">
+    <state width="1638" height="216" key="GridCell.Tab.1.right/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581363952429" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1581340207881">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581293482490" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581340207881" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -188,6 +276,15 @@
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_factory_test_risk_analysis_factory_TestRiskAnalysisFactory_test_create_risk_analysis.coverage" NAME="Test: tests.unit_test.domain.factory.test_risk_analysis_factory.TestRiskAnalysisFactory.test_create_risk_analysis Coverage Results" MODIFIED="1581301537516" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Unittests_for_test_risk_analysis_rules_factory_TestRiskAnalysisRulesFactory.coverage" NAME="Unittests for test_risk_analysis_rules_factory.TestRiskAnalysisRulesFactory Coverage Results" MODIFIED="1581360227992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit_test/domain/factory" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_has_income_TestHasIncome_test_is_truly_when_person_has_income.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_has_income.TestHasIncome.test_is_truly_when_person_has_income Coverage Results" MODIFIED="1581342707169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_has_income_TestHasIncome.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_has_income.TestHasIncome Coverage Results" MODIFIED="1581343670853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_has_income_TestHasIncome_test_is_falsely_when_person_has_no_income.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_has_income.TestHasIncome.test_is_falsely_when_person_has_no_income Coverage Results" MODIFIED="1581343662773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_has_income_TestHasIncome_test_check_if_person_has_income.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_has_income.TestHasIncome.test_check_if_person_has_income Coverage Results" MODIFIED="1581342140376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_factory_test_risk_analysis_rules_factory_TestRiskAnalysisRulesFactory_test_retrieve_persons_rules_list.coverage" NAME="Test: tests.unit_test.domain.factory.test_risk_analysis_rules_factory.TestRiskAnalysisRulesFactory.test_retrieve_persons_rules_list Coverage Results" MODIFIED="1581364048196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_test_person_rules_TestPersonRules_test_return_the_list_of_persons_rules.coverage" NAME="Test: tests.unit_test.domain.entity.rule.test_person_rules.TestPersonRules.test_return_the_list_of_persons_rules Coverage Results" MODIFIED="1581358712846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_has_income_TestHasIncome_test_is_falsely_when_person_has_income.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_has_income.TestHasIncome.test_is_falsely_when_person_has_income Coverage Results" MODIFIED="1581342341916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_factory_test_risk_analysis_factory_TestRiskAnalysisFactory_test_create_risk_analysis.coverage" NAME="Test: tests.unit_test.domain.factory.test_risk_analysis_factory.TestRiskAnalysisFactory.test_create_risk_analysis Coverage Results" MODIFIED="1581342684369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_test_person_rules_TestPersonRules.coverage" NAME="Test: tests.unit_test.domain.entity.rule.test_person_rules.TestPersonRules Coverage Results" MODIFIED="1581344573394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
