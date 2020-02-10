@@ -53,6 +53,6 @@ class TestRiskAnalysisFactory(TestCase):
     def test_create_risk_analysis(self):
         risk_analysis_factory = RiskAnalysisFactory()
 
-        response = risk_analysis_factory.createRiskAnalysis(self.user_profile_information)
+        response = risk_analysis_factory.create_from_user_information(self.user_profile_information)
 
         self.assertEqual(self.risk_analysis, response)
