@@ -1,6 +1,11 @@
 from abc import ABC
 
-PRODUCT_SCORE = ['economic', 'regular', 'responsible']
+PRODUCT_SCORE_ECONOMIC = 'economic'
+PRODUCT_SCORE_REGULAR = 'regular'
+PRODUCT_SCORE_RESPONSIBLE = 'responsible'
+PRODUCT_SCORE_INELIGIBLE = 'ineligible'
+PRODUCT_SCORE_DEFAULT = 'default'
+PRODUCT_SCORE = [PRODUCT_SCORE_ECONOMIC, PRODUCT_SCORE_ECONOMIC, PRODUCT_SCORE_RESPONSIBLE]
 
 
 class Product(ABC):
