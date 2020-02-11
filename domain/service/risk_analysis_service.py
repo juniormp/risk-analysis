@@ -21,3 +21,6 @@ class RiskAnalysisService:
                 rule.execute(risk_analysis)
 
         return risk_analysis
+
+    def get_analysis_result_from(self, risk_analysis):
+        return True
