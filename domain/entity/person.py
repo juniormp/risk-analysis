@@ -9,7 +9,7 @@ class Person:
     dependents = None
     marital_status = None
     risk_question = None
-    assets = None
+    assets = []
 
     def __init__(self, age, income, dependents, marital_status, risk_question, assets):
         self.age = age

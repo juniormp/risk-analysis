@@ -1,5 +1,4 @@
 import array
-
 from domain.entity.asset import Asset
 from domain.entity.person import Person
 
@@ -35,7 +34,7 @@ class PersonBuilder:
 
         return self
 
-    def with_house_asset(self, asset: Asset):
+    def with_asset(self, asset: Asset):
         self.person.assets.append(asset)
 
         return self
