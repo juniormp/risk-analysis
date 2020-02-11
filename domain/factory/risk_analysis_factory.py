@@ -11,7 +11,7 @@ from domain.entity.vehicle import Vehicle
 
 
 class RiskAnalysisFactory:
-    def create_from_user_information(self, user_information):
+    def create_risk_analysis_from(self, user_information):
         house = self.__create_house(user_information['ownership_status'])
         vehicle = self.__create_vehicle(user_information['year_manufactured'])
         person = self.__create_person(user_information, house, vehicle)

@@ -2,22 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="baf51114-178d-4787-aeda-f9a93db2f65f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/domain/entity/rule/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/entity/rule/person/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/entity/rule/person/has_income.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/entity/rule/person_rules.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/factory/risk_analysis_rules_factory.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/service/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/domain/service/risk_analysis_service.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit_test/domain/entity/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit_test/domain/entity/rule/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit_test/domain/entity/rule/person/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit_test/domain/entity/rule/person/test_has_income.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit_test/domain/entity/rule/test_person_rules.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/unit_test/domain/factory/test_risk_analysis_rules_factory.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/application/use_case/risk_analysis_use_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/application/use_case/risk_analysis_use_case.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/unit_test/domain/factory/test_risk_analysis_factory.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit_test/domain/factory/test_risk_analysis_factory.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/entity/risk_score.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/entity/risk_score.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/domain/entity/rule/person/over_sixty_years_old.py" beforeDir="false" afterPath="$PROJECT_DIR$/domain/entity/rule/person/over_sixty_years_old.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/risk_profile_builder.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/risk_profile_builder.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/unit_test/domain/entity/rule/person/test_over_sixty_years_old.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/unit_test/domain/entity/rule/person/test_over_sixty_years_old.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,7 +36,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/domain/entity/product" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/domain/entity/rule/asset" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
@@ -56,16 +45,22 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/risk_analysis" />
       <recent name="$PROJECT_DIR$/domain/entity/product" />
       <recent name="$PROJECT_DIR$/application" />
       <recent name="$PROJECT_DIR$/domain/entity" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/domain/entity/product" />
+      <recent name="$PROJECT_DIR$/domain/entity/rule/asset" />
+      <recent name="$PROJECT_DIR$/tests/unit_test/domain/entity/rule/asset" />
+      <recent name="$PROJECT_DIR$/tests/unit_test/domain/entity/rule" />
+      <recent name="$PROJECT_DIR$/domain/entity/rule" />
+      <recent name="$PROJECT_DIR$/tests/unit_test/domain/entity/rule/person" />
     </key>
   </component>
-  <component name="RunManager" selected="Django tests.Test: tests.unit_test.domain.factory.test_risk_analysis_rules_factory.TestRiskAnalysisRulesFactory.test_retrieve_persons_rules_list">
-    <configuration name="Test: tests.unit_test.domain.entity.rule.person.test_has_income.TestHasIncome" type="DjangoTestsConfigurationType" temporary="true">
+  <component name="RunManager" selected="Django tests.Test: tests.unit_test.domain.entity.rule.person.test_over_sixty_years_old.TestOverSixtyYearsOld.test_is_truly_when_person_is_over_sixty_years_old">
+    <configuration name="Test: tests.unit_test.domain.entity.rule.person.test_over_sixty_years_old.TestOverSixtyYearsOld" type="DjangoTestsConfigurationType" temporary="true">
       <module name="risk_analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -78,14 +73,14 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="tests.unit_test.domain.entity.rule.person.test_has_income.TestHasIncome" />
+      <option name="TARGET" value="tests.unit_test.domain.entity.rule.person.test_over_sixty_years_old.TestOverSixtyYearsOld" />
       <option name="SETTINGS_FILE" value="" />
       <option name="CUSTOM_SETTINGS" value="false" />
       <option name="USE_OPTIONS" value="false" />
       <option name="OPTIONS" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Test: tests.unit_test.domain.entity.rule.test_person_rules.TestPersonRules" type="DjangoTestsConfigurationType" temporary="true">
+    <configuration name="Test: tests.unit_test.domain.entity.rule.person.test_over_sixty_years_old.TestOverSixtyYearsOld.test_is_falsely_when_person_under_sixty_years_old" type="DjangoTestsConfigurationType" temporary="true">
       <module name="risk_analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -98,14 +93,14 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="tests.unit_test.domain.entity.rule.test_person_rules.TestPersonRules" />
+      <option name="TARGET" value="tests.unit_test.domain.entity.rule.person.test_over_sixty_years_old.TestOverSixtyYearsOld.test_is_falsely_when_person_under_sixty_years_old" />
       <option name="SETTINGS_FILE" value="" />
       <option name="CUSTOM_SETTINGS" value="false" />
       <option name="USE_OPTIONS" value="false" />
       <option name="OPTIONS" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Test: tests.unit_test.domain.entity.rule.test_person_rules.TestPersonRules.test_return_the_list_of_persons_rules" type="DjangoTestsConfigurationType" temporary="true">
+    <configuration name="Test: tests.unit_test.domain.entity.rule.person.test_over_sixty_years_old.TestOverSixtyYearsOld.test_is_truly_when_person_is_over_sixty_years_old" type="DjangoTestsConfigurationType" temporary="true">
       <module name="risk_analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -118,27 +113,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="tests.unit_test.domain.entity.rule.test_person_rules.TestPersonRules.test_return_the_list_of_persons_rules" />
-      <option name="SETTINGS_FILE" value="" />
-      <option name="CUSTOM_SETTINGS" value="false" />
-      <option name="USE_OPTIONS" value="false" />
-      <option name="OPTIONS" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="Test: tests.unit_test.domain.factory.test_risk_analysis_rules_factory.TestRiskAnalysisRulesFactory.test_retrieve_persons_rules_list" type="DjangoTestsConfigurationType" temporary="true">
-      <module name="risk_analysis" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="TARGET" value="tests.unit_test.domain.factory.test_risk_analysis_rules_factory.TestRiskAnalysisRulesFactory.test_retrieve_persons_rules_list" />
+      <option name="TARGET" value="tests.unit_test.domain.entity.rule.person.test_over_sixty_years_old.TestOverSixtyYearsOld.test_is_truly_when_person_is_over_sixty_years_old" />
       <option name="SETTINGS_FILE" value="" />
       <option name="CUSTOM_SETTINGS" value="false" />
       <option name="USE_OPTIONS" value="false" />
@@ -168,28 +143,43 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests for test_risk_analysis_rules_factory.TestRiskAnalysisRulesFactory" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests for test_risk_analysis_service.TestRiskAnalysisService" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="risk_analysis" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/unit_test/domain/factory" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/unit_test/domain/service" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_risk_analysis_rules_factory.TestRiskAnalysisRulesFactory&quot;" />
+      <option name="_new_target" value="&quot;test_risk_analysis_service.TestRiskAnalysisService&quot;" />
+      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unittests for test_risk_analysis_service.TestRiskAnalysisService.test_execute_risk_analysis_using_rules_list" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+      <module name="risk_analysis" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests/unit_test/domain/service" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;test_risk_analysis_service.TestRiskAnalysisService.test_execute_risk_analysis_using_rules_list&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Django tests.Test: tests.unit_test.domain.factory.test_risk_analysis_rules_factory.TestRiskAnalysisRulesFactory.test_retrieve_persons_rules_list" />
-        <item itemvalue="Python tests.Unittests for test_risk_analysis_rules_factory.TestRiskAnalysisRulesFactory" />
-        <item itemvalue="Django tests.Test: tests.unit_test.domain.entity.rule.test_person_rules.TestPersonRules.test_return_the_list_of_persons_rules" />
-        <item itemvalue="Django tests.Test: tests.unit_test.domain.entity.rule.test_person_rules.TestPersonRules" />
-        <item itemvalue="Django tests.Test: tests.unit_test.domain.entity.rule.person.test_has_income.TestHasIncome" />
+        <item itemvalue="Django tests.Test: tests.unit_test.domain.entity.rule.person.test_over_sixty_years_old.TestOverSixtyYearsOld.test_is_truly_when_person_is_over_sixty_years_old" />
+        <item itemvalue="Django tests.Test: tests.unit_test.domain.entity.rule.person.test_over_sixty_years_old.TestOverSixtyYearsOld.test_is_falsely_when_person_under_sixty_years_old" />
+        <item itemvalue="Django tests.Test: tests.unit_test.domain.entity.rule.person.test_over_sixty_years_old.TestOverSixtyYearsOld" />
+        <item itemvalue="Python tests.Unittests for test_risk_analysis_service.TestRiskAnalysisService" />
+        <item itemvalue="Python tests.Unittests for test_risk_analysis_service.TestRiskAnalysisService.test_execute_risk_analysis_using_rules_list" />
       </list>
     </recent_temporary>
   </component>
@@ -203,7 +193,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1581336755434</updated>
-      <workItem from="1581336756791" duration="16446000" />
+      <workItem from="1581336756791" duration="41790000" />
     </task>
     <servers />
   </component>
@@ -223,46 +213,54 @@
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
     <state x="578" y="279" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581340165078" />
-    <state width="1110" height="466" key="DebuggerActiveHint" timestamp="1581358871877">
+    <state width="1110" height="466" key="DebuggerActiveHint" timestamp="1581391277971">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1110" height="466" key="DebuggerActiveHint/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581358871877" />
-    <state width="1638" height="249" key="GridCell.Tab.0.bottom" timestamp="1581364110066">
+    <state width="1110" height="466" key="DebuggerActiveHint/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581391277971" />
+    <state width="1638" height="216" key="GridCell.Tab.0.bottom" timestamp="1581392046253">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="249" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581364110066" />
-    <state width="1638" height="249" key="GridCell.Tab.0.center" timestamp="1581364110065">
+    <state width="1638" height="216" key="GridCell.Tab.0.bottom/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581392046253" />
+    <state width="1638" height="356" key="GridCell.Tab.0.bottom/1680.23.1920.1057/0.0.1680.1050@0.0.1680.1050" timestamp="1581377502338" />
+    <state width="1638" height="216" key="GridCell.Tab.0.center" timestamp="1581392046252">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="249" key="GridCell.Tab.0.center/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581364110065" />
-    <state width="1638" height="249" key="GridCell.Tab.0.left" timestamp="1581364110063">
+    <state width="1638" height="216" key="GridCell.Tab.0.center/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581392046252" />
+    <state width="1638" height="356" key="GridCell.Tab.0.center/1680.23.1920.1057/0.0.1680.1050@0.0.1680.1050" timestamp="1581377502336" />
+    <state width="1638" height="216" key="GridCell.Tab.0.left" timestamp="1581392046251">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="249" key="GridCell.Tab.0.left/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581364110063" />
-    <state width="1638" height="249" key="GridCell.Tab.0.right" timestamp="1581364110066">
+    <state width="1638" height="216" key="GridCell.Tab.0.left/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581392046251" />
+    <state width="1638" height="356" key="GridCell.Tab.0.left/1680.23.1920.1057/0.0.1680.1050@0.0.1680.1050" timestamp="1581377502335" />
+    <state width="1638" height="216" key="GridCell.Tab.0.right" timestamp="1581392046252">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="249" key="GridCell.Tab.0.right/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581364110066" />
-    <state width="1638" height="216" key="GridCell.Tab.1.bottom" timestamp="1581363952430">
+    <state width="1638" height="216" key="GridCell.Tab.0.right/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581392046252" />
+    <state width="1638" height="356" key="GridCell.Tab.0.right/1680.23.1920.1057/0.0.1680.1050@0.0.1680.1050" timestamp="1581377502337" />
+    <state width="1638" height="216" key="GridCell.Tab.1.bottom" timestamp="1581392046257">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="216" key="GridCell.Tab.1.bottom/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581363952430" />
-    <state width="1638" height="216" key="GridCell.Tab.1.center" timestamp="1581363952429">
+    <state width="1638" height="216" key="GridCell.Tab.1.bottom/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581392046257" />
+    <state width="1638" height="216" key="GridCell.Tab.1.center" timestamp="1581392046255">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="216" key="GridCell.Tab.1.center/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581363952429" />
-    <state width="1638" height="216" key="GridCell.Tab.1.left" timestamp="1581363952428">
+    <state width="1638" height="216" key="GridCell.Tab.1.center/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581392046255" />
+    <state width="1638" height="216" key="GridCell.Tab.1.left" timestamp="1581392046254">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="216" key="GridCell.Tab.1.left/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581363952428" />
-    <state width="1638" height="216" key="GridCell.Tab.1.right" timestamp="1581363952429">
+    <state width="1638" height="216" key="GridCell.Tab.1.left/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581392046254" />
+    <state width="1638" height="216" key="GridCell.Tab.1.right" timestamp="1581392046256">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="216" key="GridCell.Tab.1.right/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581363952429" />
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1581340207881">
+    <state width="1638" height="216" key="GridCell.Tab.1.right/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581392046256" />
+    <state x="506" y="160" width="667" height="729" key="find.popup" timestamp="1581391680208">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581340207881" />
+    <state x="506" y="160" width="667" height="729" key="find.popup/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581391680208" />
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup" timestamp="1581364725698">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="505" y="233" width="670" height="676" key="search.everywhere.popup/1680.0.1920.1080/0.0.1680.1050@0.0.1680.1050" timestamp="1581364725698" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -272,19 +270,60 @@
           <line>14</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/domain/entity/rule/asset/is_vehicle_produced_last_five_years.py</url>
+          <option name="timeStamp" value="20" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/unit_test/domain/service/test_risk_analysis_service.py</url>
+          <line>18</line>
+          <option name="timeStamp" value="29" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/tests/unit_test/domain/entity/rule/person/test_over_sixty_years_old.py</url>
+          <line>22</line>
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/risk_analysis$Unittests_for_test_risk_analysis_rules_factory_TestRiskAnalysisRulesFactory.coverage" NAME="Unittests for test_risk_analysis_rules_factory.TestRiskAnalysisRulesFactory Coverage Results" MODIFIED="1581360227992" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit_test/domain/factory" />
-    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_has_income_TestHasIncome_test_is_truly_when_person_has_income.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_has_income.TestHasIncome.test_is_truly_when_person_has_income Coverage Results" MODIFIED="1581342707169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_has_income_TestHasIncome.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_has_income.TestHasIncome Coverage Results" MODIFIED="1581343670853" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_has_income_TestHasIncome_test_is_falsely_when_person_has_no_income.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_has_income.TestHasIncome.test_is_falsely_when_person_has_no_income Coverage Results" MODIFIED="1581343662773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_has_income_TestHasIncome_test_check_if_person_has_income.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_has_income.TestHasIncome.test_check_if_person_has_income Coverage Results" MODIFIED="1581342140376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_has_dependents_TestHasDependents.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_has_dependents.TestHasDependents Coverage Results" MODIFIED="1581370092990" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_asset_test_is_mortgaged_TestIsMortgaged.coverage" NAME="Test: tests.unit_test.domain.entity.rule.asset.test_is_mortgaged.TestIsMortgaged Coverage Results" MODIFIED="1581371250010" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_asset_test_vehicle_produced_last_five_years_TestVehicleProducedLastFiveYears_test_is_truly_when_vehicle_was_produced_last_five_years.coverage" NAME="Test: tests.unit_test.domain.entity.rule.asset.test_vehicle_produced_last_five_years.TestVehicleProducedLastFiveYears.test_is_truly_when_vehicle_was_produced_last_five_years Coverage Results" MODIFIED="1581373164265" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_factory_test_risk_analysis_rules_factory_TestRiskAnalysisRulesFactory_test_retrieve_persons_rules_list.coverage" NAME="Test: tests.unit_test.domain.factory.test_risk_analysis_rules_factory.TestRiskAnalysisRulesFactory.test_retrieve_persons_rules_list Coverage Results" MODIFIED="1581364048196" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_over_sixty_years_old_TestOverSixtyYearsOld_test_is_falsely_when_person_under_sixty_years_old.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_over_sixty_years_old.TestOverSixtyYearsOld.test_is_falsely_when_person_under_sixty_years_old Coverage Results" MODIFIED="1581391236266" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_asset_test_is_house_mortgaged_TestIsHouseMortgaged.coverage" NAME="Test: tests.unit_test.domain.entity.rule.asset.test_is_house_mortgaged.TestIsHouseMortgaged Coverage Results" MODIFIED="1581373503325" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_test_asset_rules_TestPersonRules.coverage" NAME="Test: tests.unit_test.domain.entity.rule.test_asset_rules.TestPersonRules Coverage Results" MODIFIED="1581373524203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_has_asset_TestHasAsset_test_product_score_is_default_when_person_has_asset.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_has_asset.TestHasAsset.test_product_score_is_default_when_person_has_asset Coverage Results" MODIFIED="1581383085948" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Unittests_for_test_risk_analysis_service_TestRiskAnalysisService_test_execute_risk_analysis_using_rules_list.coverage" NAME="Unittests for test_risk_analysis_service.TestRiskAnalysisService.test_execute_risk_analysis_using_rules_list Coverage Results" MODIFIED="1581385945277" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit_test/domain/service" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Unittests_for_test_risk_analysis_rules_factory_TestRiskAnalysisRulesFactory.coverage" NAME="Unittests for test_risk_analysis_rules_factory.TestRiskAnalysisRulesFactory Coverage Results" MODIFIED="1581374118168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit_test/domain/factory" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_between_thirty_and_forty_years_old_TestUnderThirtyYearsOld.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_between_thirty_and_forty_years_old.TestUnderThirtyYearsOld Coverage Results" MODIFIED="1581369251646" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_under_thirty_years_old_TestUnderThirtyYearsOld.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_under_thirty_years_old.TestUnderThirtyYearsOld Coverage Results" MODIFIED="1581368429169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_has_asset_TestHasAsset_test_is_truly_when_person_has_asset.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_has_asset.TestHasAsset.test_is_truly_when_person_has_asset Coverage Results" MODIFIED="1581366011153" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Unittests_for_test_risk_analysis_rules_factory_TestRiskAnalysisRulesFactory_test_retrieve_person_rules_list.coverage" NAME="Unittests for test_risk_analysis_rules_factory.TestRiskAnalysisRulesFactory.test_retrieve_person_rules_list Coverage Results" MODIFIED="1581374084669" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit_test/domain/factory" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_between_thirty_and_forty_years_old_TestUnderThirtyYearsOld_test_is_truly_when_person_is_between_thirty_and_forty_years_old.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_between_thirty_and_forty_years_old.TestUnderThirtyYearsOld.test_is_truly_when_person_is_between_thirty_and_forty_years_old Coverage Results" MODIFIED="1581369216444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_test_person_rules_TestPersonRules_test_return_the_list_of_persons_rules.coverage" NAME="Test: tests.unit_test.domain.entity.rule.test_person_rules.TestPersonRules.test_return_the_list_of_persons_rules Coverage Results" MODIFIED="1581358712846" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_is_married_TestIsMarried.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_is_married.TestIsMarried Coverage Results" MODIFIED="1581370479132" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_has_income_TestHasIncome_test_is_falsely_when_person_has_income.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_has_income.TestHasIncome.test_is_falsely_when_person_has_income Coverage Results" MODIFIED="1581342341916" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_factory_test_risk_analysis_factory_TestRiskAnalysisFactory_test_create_risk_analysis.coverage" NAME="Test: tests.unit_test.domain.factory.test_risk_analysis_factory.TestRiskAnalysisFactory.test_create_risk_analysis Coverage Results" MODIFIED="1581342684369" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
-    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_test_person_rules_TestPersonRules.coverage" NAME="Test: tests.unit_test.domain.entity.rule.test_person_rules.TestPersonRules Coverage Results" MODIFIED="1581344573394" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_asset_test_vehicle_produced_last_five_years_TestVehicleProducedLastFiveYears.coverage" NAME="Test: tests.unit_test.domain.entity.rule.asset.test_vehicle_produced_last_five_years.TestVehicleProducedLastFiveYears Coverage Results" MODIFIED="1581373254780" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_test_person_rules_TestPersonRules.coverage" NAME="Test: tests.unit_test.domain.entity.rule.test_person_rules.TestPersonRules Coverage Results" MODIFIED="1581370568444" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_has_income_TestHasIncome_test_is_truly_when_person_has_income.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_has_income.TestHasIncome.test_is_truly_when_person_has_income Coverage Results" MODIFIED="1581342707169" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_has_income_TestHasIncome_test_check_if_person_has_income.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_has_income.TestHasIncome.test_check_if_person_has_income Coverage Results" MODIFIED="1581342140376" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_asset_test_vehicle_produced_last_five_years_TestVehicleProducedLastFiveYears_test_is_falsely_when_vehicle_was_not_produced_last_five_years.coverage" NAME="Test: tests.unit_test.domain.entity.rule.asset.test_vehicle_produced_last_five_years.TestVehicleProducedLastFiveYears.test_is_falsely_when_vehicle_was_not_produced_last_five_years Coverage Results" MODIFIED="1581373227287" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_has_asset_TestHasAsset_test_product_score_is_default_when_person_has_no_asset.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_has_asset.TestHasAsset.test_product_score_is_default_when_person_has_no_asset Coverage Results" MODIFIED="1581384958437" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_has_asset_TestHasAsset_test_is_falsely_when_person_has_no_asset.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_has_asset.TestHasAsset.test_is_falsely_when_person_has_no_asset Coverage Results" MODIFIED="1581366078818" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Unittests_for_test_risk_analysis_service_TestRiskAnalysisService_test_execute_risk_analysis_on_rules_list.coverage" NAME="Unittests for test_risk_analysis_service.TestRiskAnalysisService.test_execute_risk_analysis_on_rules_list Coverage Results" MODIFIED="1581383945099" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit_test/domain/service" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_over_sixty_years_old_TestOverSixtyYearsOld_test_is_truly_when_person_is_over_sixty_years_old.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_over_sixty_years_old.TestOverSixtyYearsOld.test_is_truly_when_person_is_over_sixty_years_old Coverage Results" MODIFIED="1581392046238" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Unittests_for_test_risk_analysis_service_TestRiskAnalysisService.coverage" NAME="Unittests for test_risk_analysis_service.TestRiskAnalysisService Coverage Results" MODIFIED="1581385974199" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit_test/domain/service" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Unittests_for_test_risk_analysis_service_TestRiskAnalysisService_test_foo.coverage" NAME="Unittests for test_risk_analysis_service.TestRiskAnalysisService.test_foo Coverage Results" MODIFIED="1581377361726" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit_test/domain/service" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_over_sixty_years_old_TestOverSixtyYearsOld.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_over_sixty_years_old.TestOverSixtyYearsOld Coverage Results" MODIFIED="1581390510587" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_has_income_TestHasIncome.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_has_income.TestHasIncome Coverage Results" MODIFIED="1581365324059" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_has_income_TestHasIncome_test_is_falsely_when_person_has_no_income.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_has_income.TestHasIncome.test_is_falsely_when_person_has_no_income Coverage Results" MODIFIED="1581343662773" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Unittests_for_test_risk_analysis_service_TestRiskAnalysisService_test_should_build_rules_list.coverage" NAME="Unittests for test_risk_analysis_service.TestRiskAnalysisService.test_should_build_rules_list Coverage Results" MODIFIED="1581383919791" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit_test/domain/service" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Unittests_for_test_risk_analysis_rules_factory_TestRiskAnalysisRulesFactory_test_retrieve_asset_rules_list.coverage" NAME="Unittests for test_risk_analysis_rules_factory.TestRiskAnalysisRulesFactory.test_retrieve_asset_rules_list Coverage Results" MODIFIED="1581374115440" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/tests/unit_test/domain/factory" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_has_asset_TestHasAsset.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_has_asset.TestHasAsset Coverage Results" MODIFIED="1581385009763" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/risk_analysis$Test__tests_unit_test_domain_entity_rule_person_test_has_asset_TestHasAsset_test_product_score_is_ineligible_when_person_has_asset.coverage" NAME="Test: tests.unit_test.domain.entity.rule.person.test_has_asset.TestHasAsset.test_product_score_is_ineligible_when_person_has_asset Coverage Results" MODIFIED="1581385004383" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>
