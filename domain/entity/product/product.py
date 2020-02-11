@@ -9,12 +9,21 @@ PRODUCT_SCORE = [PRODUCT_SCORE_ECONOMIC, PRODUCT_SCORE_ECONOMIC, PRODUCT_SCORE_R
 
 
 class Product(ABC):
-    status = PRODUCT_SCORE
-    score = 0
+    status: str
+    score: int
 
     def __init__(self, status, score):
         self.status = status
         self.score = score
+
+    def add_score_points(self, quantity: int):
+        self.score = self.score + quantity
+
+    def deduct_score_points(self, quantity: int):
+        self.score = self.score - quantity
+
+    def update_score_status(self, status: str):
+        self.status = status
 
     def __eq__(self, other):
         return isinstance(other, Product) and \
