@@ -7,8 +7,8 @@ from domain.entity.risk_score import RiskScore
 
 
 class RiskProfileBuilder:
-    risk_profile = None
-    risk_score = None
+    risk_profile: RiskProfile
+    risk_score: RiskScore
 
     def __init__(self):
         self.risk_score = RiskScore
