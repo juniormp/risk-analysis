@@ -1,27 +1,20 @@
+from domain.entity.asset import Asset
 from domain.entity.product.product import PRODUCT_SCORE_INELIGIBLE
 from domain.entity.risk_analysis import RiskAnalysis
 from domain.entity.rule.Rule import Rule
+from domain.entity.vehicle import Vehicle
 
 
-class HasAsset(Rule):
+class HasVehicle(Rule):
     def execute(self, risk_analysis: RiskAnalysis):
         person = self.__get_person_from(risk_analysis=risk_analysis)
         risk_profile = self.__get_risk_profile_from(risk_analysis=risk_analysis)
 
         for asset in person.assets:
-            return risk_analysis
+            if self.__is_vehicle(asset=asset):
+                return risk_analysis
 
-        vehicle_product = risk_profile.risk_score.product['vehicle']
-        vehicle_product.status = PRODUCT_SCORE_INELIGIBLE
-
-        home_product = risk_profile.risk_score.product['home']
-        home_product.status = PRODUCT_SCORE_INELIGIBLE
-
-        life_product = risk_profile.risk_score.product['life']
-        life_product.status = PRODUCT_SCORE_INELIGIBLE
-
-        disability = risk_profile.risk_score.product['disability']
-        disability.status = PRODUCT_SCORE_INELIGIBLE
+        self.__change_to_ineligible_vehicle_product_on(risk_profile=risk_profile)
 
         return risk_analysis
 
@@ -30,3 +23,10 @@ class HasAsset(Rule):
 
     def __get_risk_profile_from(self, risk_analysis: RiskAnalysis):
         return risk_analysis.risk_profile
+
+    def __is_vehicle(self, asset: Asset):
+        return type(asset) == Vehicle
+
+    def __change_to_ineligible_vehicle_product_on(self, risk_profile):
+        vehicle = risk_profile.risk_score.product['vehicle']
+        vehicle.status = PRODUCT_SCORE_INELIGIBLE
