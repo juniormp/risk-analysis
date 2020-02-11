@@ -12,16 +12,16 @@ class HasAsset(Rule):
             return risk_analysis
 
         vehicle_product = risk_profile.risk_score.product['vehicle']
-        vehicle_product.score = PRODUCT_SCORE_INELIGIBLE
+        vehicle_product.status = PRODUCT_SCORE_INELIGIBLE
 
         home_product = risk_profile.risk_score.product['home']
-        home_product.score = PRODUCT_SCORE_INELIGIBLE
+        home_product.status = PRODUCT_SCORE_INELIGIBLE
 
         life_product = risk_profile.risk_score.product['life']
-        life_product.score = PRODUCT_SCORE_INELIGIBLE
+        life_product.status = PRODUCT_SCORE_INELIGIBLE
 
         disability = risk_profile.risk_score.product['disability']
-        disability.score = PRODUCT_SCORE_INELIGIBLE
+        disability.status = PRODUCT_SCORE_INELIGIBLE
 
         return risk_analysis
 

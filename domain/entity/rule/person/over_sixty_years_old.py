@@ -20,7 +20,7 @@ class OverSixtyYearsOld:
 
     def __change_to_ineligible_product_on(self, risk_profile):
         life_product = risk_profile.risk_score.product['life']
-        life_product.score = PRODUCT_SCORE_INELIGIBLE
+        life_product.status = PRODUCT_SCORE_INELIGIBLE
 
         disability = risk_profile.risk_score.product['disability']
-        disability.score = PRODUCT_SCORE_INELIGIBLE
+        disability.status = PRODUCT_SCORE_INELIGIBLE
