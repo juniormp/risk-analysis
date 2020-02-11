@@ -1,5 +1,4 @@
 from django.test import TestCase
-
 from domain.entity.product.product import PRODUCT_SCORE_INELIGIBLE, PRODUCT_SCORE_DEFAULT
 from domain.entity.risk_analysis import RiskAnalysis
 from domain.entity.rule.person.over_sixty_years_old import OverSixtyYearsOld

@@ -1,5 +1,4 @@
 from django.test import TestCase
-from domain.entity.person import Person
 from domain.entity.risk_analysis import RiskAnalysis
 from domain.entity.rule.person.under_thirty_years_old import UnderThirtyYearsOld
 from tests.person_builder import PersonBuilder
@@ -19,7 +18,7 @@ class TestUnderThirtyYearsOld(TestCase):
         self.person_builder = PersonBuilder()
         self.rule = UnderThirtyYearsOld()
 
-    def test_is_truly_when_person_is_under_thirty_years_old(self):
+    def test_product_score_is_deduct_in_2_when_person_is_under_thirty_years_old(self):
         person = self.person_builder.with_age(29).build()
         risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)
 
@@ -30,7 +29,7 @@ class TestUnderThirtyYearsOld(TestCase):
         self.assertEqual(-2, risk_analysis.risk_profile.risk_score.product['home'].score)
         self.assertEqual(-2, risk_analysis.risk_profile.risk_score.product['vehicle'].score)
 
-    def test_is_falsely_when_person_is_over_thirty_years_old(self):
+    def test_product_score_is_not_deduct_in_2_when_person_is_over_thirty_years_old(self):
         person = self.person_builder.with_age(30).build()
         risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)
 
