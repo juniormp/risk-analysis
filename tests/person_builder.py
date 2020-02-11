@@ -19,7 +19,7 @@ class PersonBuilder:
 
         return self
 
-    def with_income(self, income: int):
+    def with_income(self, income: float):
         self.person.income = income
 
         return self
