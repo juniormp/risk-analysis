@@ -1,38 +1,42 @@
 from django.test import TestCase
-
-from domain.entity.house import House
-from domain.entity.person import Person
+from domain.entity.product.product import PRODUCT_SCORE_DEFAULT, PRODUCT_SCORE_INELIGIBLE
+from domain.entity.risk_analysis import RiskAnalysis
 from domain.entity.rule.person.has_income import HasIncome
-from domain.entity.vehicle import Vehicle
+from tests.person_builder import PersonBuilder
+from tests.risk_profile_builder import RiskProfileBuilder
 
 
 class TestHasIncome(TestCase):
-    def test_is_truly_when_person_has_income(self):
-        rule = HasIncome()
-        person = Person(
-            income=100.00,
-            age=None,
-            dependents=None,
-            marital_status=None,
-            risk_question=None,
-            assets=None
-        )
+    def setUp(self):
+        risk_profile_builder = RiskProfileBuilder()
+        self.risk_profile = risk_profile_builder \
+            .with_disability_product() \
+            .with_home_product() \
+            .with_life_product() \
+            .with_vehicle_product() \
+            .build()
 
-        response = rule.execute(person=person)
+        self.person_builder = PersonBuilder()
+        self.rule = HasIncome()
 
-        self.assertTrue(response)
+    def test_product_status_is_default_when_person_has_income(self):
+        person = self.person_builder.with_income(1).build()
+        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)
 
-    def test_is_falsely_when_person_has_no_income(self):
-        rule = HasIncome()
-        person = Person(
-            income=0,
-            age=None,
-            dependents=None,
-            marital_status=None,
-            risk_question=None,
-            assets=None
-        )
+        risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 
-        response = rule.execute(person=person)
+        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.risk_profile.risk_score.product['life'].status)
+        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.risk_profile.risk_score.product['disability'].status)
+        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.risk_profile.risk_score.product['home'].status)
+        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.risk_profile.risk_score.product['vehicle'].status)
 
-        self.assertFalse(response)
+    def test_product_status_is_ineligible_when_person_has_no_income(self):
+        person = self.person_builder.with_income(0).build()
+        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)
+
+        risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
+
+        self.assertEqual(PRODUCT_SCORE_INELIGIBLE, risk_analysis.risk_profile.risk_score.product['disability'].status)
+        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.risk_profile.risk_score.product['life'].status)
+        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.risk_profile.risk_score.product['home'].status)
+        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.risk_profile.risk_score.product['vehicle'].status)
