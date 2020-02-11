@@ -1,4 +1,6 @@
 from django.test import TestCase
+
+from domain.entity.product.product import PRODUCT_SCORE_INELIGIBLE, PRODUCT_SCORE_DEFAULT
 from domain.entity.risk_analysis import RiskAnalysis
 from domain.entity.rule.person.over_sixty_years_old import OverSixtyYearsOld
 from tests.person_builder import PersonBuilder
@@ -15,22 +17,27 @@ class TestOverSixtyYearsOld(TestCase):
             .with_vehicle_product() \
             .build()
 
+        self.person_builder = PersonBuilder()
         self.rule = OverSixtyYearsOld()
 
-    def test_is_truly_when_person_is_over_sixty_years_old(self):
-        person_builder = PersonBuilder()
-        person = person_builder.with_age(61).build()
+    def test_product_score_is_ineligible_when_person_is_over_sixty_years_old(self):
+        person = self.person_builder.with_age(61).build()
         risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)
 
-        response = self.rule.execute(risk_analysis=risk_analysis)
+        risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 
-        self.assertTrue(response)
+        self.assertEqual(PRODUCT_SCORE_INELIGIBLE, risk_analysis.risk_profile.risk_score.product['life'].score)
+        self.assertEqual(PRODUCT_SCORE_INELIGIBLE, risk_analysis.risk_profile.risk_score.product['disability'].score)
+        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.risk_profile.risk_score.product['home'].score)
+        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.risk_profile.risk_score.product['vehicle'].score)
 
-    def test_is_falsely_when_person_under_sixty_years_old(self):
-        person_builder = PersonBuilder()
-        person = person_builder.with_age(60).build()
+    def test_product_score_is_default_when_person_is_under_sixty_years_old(self):
+        person = self.person_builder.with_age(60).build()
         risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)
 
-        response = self.rule.execute(risk_analysis=risk_analysis)
+        risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 
-        self.assertFalse(response)
+        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.risk_profile.risk_score.product['life'].score)
+        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.risk_profile.risk_score.product['disability'].score)
+        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.risk_profile.risk_score.product['home'].score)
+        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.risk_profile.risk_score.product['vehicle'].score)

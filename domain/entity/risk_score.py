@@ -2,7 +2,7 @@ from domain.entity.product.product import Product
 
 
 class RiskScore:
-    product = []
+    product = {}
 
     def __init__(self, product):
         self.product = product

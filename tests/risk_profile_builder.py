@@ -14,7 +14,7 @@ class RiskProfileBuilder:
         self.risk_score = RiskScore
 
     def with_vehicle_product(self):
-        self.risk_score.product.append(VehicleProduct())
+        self.risk_score.product['vehicle'] = VehicleProduct()
         self.risk_profile = RiskProfile(
             risk_score=self.risk_score
         )
@@ -22,7 +22,7 @@ class RiskProfileBuilder:
         return self
 
     def with_home_product(self):
-        self.risk_score.product.append(HomeProduct())
+        self.risk_score.product['home'] = HomeProduct()
         self.risk_profile = RiskProfile(
             risk_score=self.risk_score
         )
@@ -30,7 +30,7 @@ class RiskProfileBuilder:
         return self
 
     def with_life_product(self):
-        self.risk_score.product.append(LifeProduct())
+        self.risk_score.product['life'] = LifeProduct()
         self.risk_profile = RiskProfile(
             risk_score=self.risk_score
         )
@@ -38,7 +38,7 @@ class RiskProfileBuilder:
         return self
 
     def with_disability_product(self):
-        self.risk_score.product.append(DisabilityProduct())
+        self.risk_score.product['disability'] = DisabilityProduct()
         self.risk_profile = RiskProfile(
             risk_score=self.risk_score
         )
