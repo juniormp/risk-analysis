@@ -1,10 +1,10 @@
 from django.test import TestCase
-from domain.entity.product.product import Product, PRODUCT_SCORE_DEFAULT
+from domain.entity.product.product import Product, PRODUCT_SCORE_ECONOMIC
 
 
 class TestProduct(TestCase):
     def test_should_add_points(self):
-        product = Product(status=PRODUCT_SCORE_DEFAULT, risk_score=0)
+        product = Product(status=PRODUCT_SCORE_ECONOMIC, risk_score=0)
 
         product.add_score_points(1)
         product.add_score_points(2)
@@ -13,7 +13,7 @@ class TestProduct(TestCase):
         self.assertEqual(product.get_score(), 13)
 
     def test_should_deduct_points(self):
-        product = Product(status=PRODUCT_SCORE_DEFAULT, risk_score=0)
+        product = Product(status=PRODUCT_SCORE_ECONOMIC, risk_score=0)
 
         product.deduct_score_points(1)
         product.deduct_score_points(2)

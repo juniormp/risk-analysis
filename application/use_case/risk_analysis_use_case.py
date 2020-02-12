@@ -16,9 +16,9 @@ class RiskAnalysisUseCase(AbstractUseCase):
         risk_analysis = self.__risk_analysis_factory.create_risk_analysis_from(user_information=user_information)
         rules_list = self.__risk_analysis_rules_factory.build_rules_list()
         self.__risk_analysis_service.apply_rules_on(rules_list=rules_list, risk_analysis=risk_analysis)
-        self.__risk_analysis_service.get_result_from(risk_analysis.risk_profile)
+        risk_profile = self.__risk_analysis_service.get_result_from(risk_analysis.risk_profile)
 
-        return risk_analysis
+        return risk_profile
 
 
 

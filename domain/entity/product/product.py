@@ -3,7 +3,6 @@ from abc import ABC
 PRODUCT_SCORE_ECONOMIC = 'economic'
 PRODUCT_SCORE_REGULAR = 'regular'
 PRODUCT_SCORE_RESPONSIBLE = 'responsible'
-PRODUCT_SCORE_DEFAULT = 'default'
 PRODUCT_SCORE_INELIGIBLE = 'ineligible'
 
 VEHICLE_PRODUCT = 'vehicle'

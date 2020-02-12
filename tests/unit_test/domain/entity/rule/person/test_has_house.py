@@ -1,6 +1,6 @@
 from django.test import TestCase
 from domain.entity.house import House, OWNERSHIP_STATUS_OWNED
-from domain.entity.product.product import PRODUCT_SCORE_INELIGIBLE, PRODUCT_SCORE_DEFAULT
+from domain.entity.product.product import PRODUCT_SCORE_INELIGIBLE, PRODUCT_SCORE_ECONOMIC
 from domain.entity.risk_analysis import RiskAnalysis
 from domain.entity.rule.person.has_house import HasHouse
 from tests.person_builder import PersonBuilder
@@ -29,9 +29,9 @@ class TestHasHouse(TestCase):
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 
         self.assertEqual(PRODUCT_SCORE_INELIGIBLE, risk_analysis.get_products_in_risk_analysis()[HOME_PRODUCT].get_status())
-        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.get_products_in_risk_analysis()[VEHICLE_PRODUCT].get_status())
-        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.get_products_in_risk_analysis()[LIFE_PRODUCT].get_status())
-        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.get_products_in_risk_analysis()[DISABILITY_PRODUCT].get_status())
+        self.assertEqual(PRODUCT_SCORE_ECONOMIC, risk_analysis.get_products_in_risk_analysis()[VEHICLE_PRODUCT].get_status())
+        self.assertEqual(PRODUCT_SCORE_ECONOMIC, risk_analysis.get_products_in_risk_analysis()[LIFE_PRODUCT].get_status())
+        self.assertEqual(PRODUCT_SCORE_ECONOMIC, risk_analysis.get_products_in_risk_analysis()[DISABILITY_PRODUCT].get_status())
 
     def test_home_product_status_is_default_when_person_has_house(self):
         house = House(ownership_status=OWNERSHIP_STATUS_OWNED)
@@ -40,7 +40,7 @@ class TestHasHouse(TestCase):
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 
-        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.get_products_in_risk_analysis()[HOME_PRODUCT].get_status())
-        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.get_products_in_risk_analysis()[VEHICLE_PRODUCT].get_status())
-        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.get_products_in_risk_analysis()[LIFE_PRODUCT].get_status())
-        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.get_products_in_risk_analysis()[DISABILITY_PRODUCT].get_status())
+        self.assertEqual(PRODUCT_SCORE_ECONOMIC, risk_analysis.get_products_in_risk_analysis()[HOME_PRODUCT].get_status())
+        self.assertEqual(PRODUCT_SCORE_ECONOMIC, risk_analysis.get_products_in_risk_analysis()[VEHICLE_PRODUCT].get_status())
+        self.assertEqual(PRODUCT_SCORE_ECONOMIC, risk_analysis.get_products_in_risk_analysis()[LIFE_PRODUCT].get_status())
+        self.assertEqual(PRODUCT_SCORE_ECONOMIC, risk_analysis.get_products_in_risk_analysis()[DISABILITY_PRODUCT].get_status())

@@ -1,6 +1,6 @@
-from domain.entity.product.product import Product, PRODUCT_SCORE_DEFAULT
+from domain.entity.product.product import Product, PRODUCT_SCORE_ECONOMIC
 
 
 class DisabilityProduct(Product):
     def __init__(self):
-        super().__init__(status=PRODUCT_SCORE_DEFAULT, risk_score=0)
+        super().__init__(status=PRODUCT_SCORE_ECONOMIC, risk_score=0)

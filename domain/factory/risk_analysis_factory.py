@@ -12,8 +12,15 @@ from domain.entity.vehicle import Vehicle
 
 class RiskAnalysisFactory:
     def create_risk_analysis_from(self, user_information):
-        house = self.__create_house(user_information['ownership_status'])
-        vehicle = self.__create_vehicle(user_information['year_manufactured'])
+        house = None
+        vehicle = None
+
+        if user_information['house']['ownership_status'] is not None:
+            house = self.__create_house(user_information['house']['ownership_status'])
+
+        if user_information['vehicle']['year'] is not None:
+            vehicle = self.__create_vehicle(user_information['vehicle']['year'])
+
         person = self.__create_person(user_information, house, vehicle)
 
         vehicle_product = VehicleProduct()
@@ -26,15 +33,18 @@ class RiskAnalysisFactory:
 
         return risk_analysis
 
+
     def __create_house(self, ownership_status):
         return House(
             ownership_status=ownership_status
         )
 
+
     def __create_vehicle(self, year_manufactured):
         return Vehicle(
             year_manufactured=year_manufactured
         )
+
 
     def __create_person(self, user_information, house, vehicle):
         return Person(
@@ -46,6 +56,7 @@ class RiskAnalysisFactory:
             assets=[house, vehicle]
         )
 
+
     def __create_risk_profile(self, vehicle_product, home_product, life_product, disability_product):
         return RiskProfile(
             products={
@@ -55,6 +66,7 @@ class RiskAnalysisFactory:
                 DISABILITY_PRODUCT: disability_product
             }
         )
+
 
     def __create_risk_analysis(self, person, risk_profile):
         return RiskAnalysis(

@@ -20,18 +20,18 @@ class TestRiskAnalysisFactory(TestCase):
             'income': 100,
             'marital_status': 'married',
             'risk_question': [False, True, True],
-            'ownership_status': 'owned',
-            'year_manufactured': 2018
+            'house': {'ownership_status': 'owned'},
+            'vehicle': {'year': '2018'}
         }
 
-        self.house = House(ownership_status="owned")
-        self.vehicle = Vehicle(year_manufactured=2018)
+        self.house = House(ownership_status=self.user_profile_information['house']['ownership_status'])
+        self.vehicle = Vehicle(year_manufactured=self.user_profile_information['vehicle']['year'])
         self.person = Person(
-            age=30,
-            dependents=0,
-            income=100,
-            marital_status='married',
-            risk_question=[False, True, True],
+            age=self.user_profile_information['age'],
+            dependents=self.user_profile_information['dependents'],
+            income=self.user_profile_information['income'],
+            marital_status=self.user_profile_information['marital_status'],
+            risk_question=self.user_profile_information['risk_question'],
             assets=[self.house, self.vehicle]
         )
         self.vehicle_product = VehicleProduct()

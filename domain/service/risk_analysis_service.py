@@ -14,7 +14,7 @@ class RiskAnalysisService:
             rule.execute(risk_analysis)
 
     def get_result_from(self, risk_profile: RiskProfile):
-        for __, product in risk_profile.get_products():
+        for __, product in risk_profile.get_products().items():
             for status in self.__get_product_status():
                 if status.apply_condition(product.risk_score) and self.__is_not_inelegible(product.status):
                     product.update_status(status.name)

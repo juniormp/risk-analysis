@@ -23,7 +23,7 @@ class TestVehicleProducedLastFiveYears(TestCase):
 
     @freeze_time("2020-01-01")
     def test_product_score_is_add_in_1_when_vehicle_was_produced_last_5_years(self):
-        vehicle = Vehicle(year_manufactured=2015)
+        vehicle = Vehicle(year_manufactured="2015")
         person = self.person_builder.with_asset(asset=vehicle).build()
         risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)
 
@@ -34,9 +34,9 @@ class TestVehicleProducedLastFiveYears(TestCase):
         self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()[HOME_PRODUCT].get_score())
         self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()[LIFE_PRODUCT].get_score())
 
-    @freeze_time("2020-01-01")
+    @freeze_time("2020")
     def test_product_score_is_not_add_in_1_when_vehicle_was_produced_last_5_years(self):
-        vehicle = Vehicle(year_manufactured=2013)
+        vehicle = Vehicle(year_manufactured="2013-01-01")
         self.person_builder.person.assets = []
         person = self.person_builder.with_asset(asset=vehicle).build()
         risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)

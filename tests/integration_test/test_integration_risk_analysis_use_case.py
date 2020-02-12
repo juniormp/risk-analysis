@@ -9,13 +9,13 @@ from risk_analysis.service_registry import ServiceRegistry
 class TestIntegrationRiskAnalysisUseCase(TestCase):
     def test_should_execute_risk_analysis_first_simulation(self):
         user_information = {
-            "age": 20,
+            "age": 50,
             "dependents": 10,
-            "ownership_status": "mortgaged",
-            "income": 260,
+            "house": {"ownership_status": "owned"},
+            "income": 200,
             "marital_status": "married",
             "risk_question": [0, 1, 1],
-            "year_manufactured": 2010
+            "vehicle": {"year": "2018"}
         }
 
         risk_analysis_use_case = RiskAnalysisUseCase(risk_analysis_service=ServiceRegistry.service_risk_analysis(),
@@ -28,10 +28,12 @@ class TestIntegrationRiskAnalysisUseCase(TestCase):
         self.assertEqual(PRODUCT_SCORE_ECONOMIC, risk_analysis.risk_profile.get_product_by(HOME_PRODUCT).get_status())
 
         self.assertEqual(-2, risk_analysis.risk_profile.get_product_by(VEHICLE_PRODUCT).get_score())
-        self.assertEqual(PRODUCT_SCORE_ECONOMIC, risk_analysis.risk_profile.get_product_by(VEHICLE_PRODUCT).get_status())
+        self.assertEqual(PRODUCT_SCORE_ECONOMIC,
+                         risk_analysis.risk_profile.get_product_by(VEHICLE_PRODUCT).get_status())
 
         self.assertEqual(-1, risk_analysis.risk_profile.get_product_by(LIFE_PRODUCT).get_score())
         self.assertEqual(PRODUCT_SCORE_ECONOMIC, risk_analysis.risk_profile.get_product_by(LIFE_PRODUCT).get_status())
 
         self.assertEqual(-2, risk_analysis.risk_profile.get_product_by(DISABILITY_PRODUCT).get_score())
-        self.assertEqual(PRODUCT_SCORE_ECONOMIC, risk_analysis.risk_profile.get_product_by(DISABILITY_PRODUCT).get_status())
+        self.assertEqual(PRODUCT_SCORE_ECONOMIC,
+                         risk_analysis.risk_profile.get_product_by(DISABILITY_PRODUCT).get_status())

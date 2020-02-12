@@ -1,3 +1,4 @@
+from rest_framework.renderers import JSONRenderer
 from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
@@ -18,7 +19,6 @@ class RiskAnalysisView(APIView):
 
         if user_information.is_valid():
             response = self.__risk_analysis_use_case.execute(user_information.data)
-
-            return Response(response, status=status.HTTP_200_OK)
+            return Response(response.to_array(), status=status.HTTP_200_OK)
         else:
             return Response(user_information.errors, status=status.HTTP_400_BAD_REQUEST)

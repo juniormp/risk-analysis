@@ -6,6 +6,8 @@ from domain.entity.rule.Rule import Rule
 from domain.entity.vehicle import Vehicle
 import pendulum
 
+from infrastructure.date_time_helper import DateTimeHelper
+
 
 class VehicleProducedLastFiveYears(Rule):
     def execute(self, risk_analysis: RiskAnalysis):
@@ -28,11 +30,10 @@ class VehicleProducedLastFiveYears(Rule):
         return type(asset) == Vehicle
 
     def __was_produced_last_five_years(self, year_manufactured: pendulum.datetime):
-        time_right_now = pendulum.now()
-        five_years_ago = time_right_now.subtract(years=5)
-        year = five_years_ago.year
+        five_years_ago = DateTimeHelper.subtract_years(years=5)
+        date = DateTimeHelper.str_to_date_time(date=year_manufactured)
 
-        return year_manufactured > year
+        return date > five_years_ago
 
     def __add_points_to(self, risk_profile: RiskProfile):
         vehicle = risk_profile.get_product_by(name=VEHICLE_PRODUCT)
