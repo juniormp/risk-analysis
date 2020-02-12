@@ -1,17 +1,19 @@
 from domain.entity.asset import Asset
 from domain.entity.risk_analysis import RiskAnalysis
+from domain.entity.risk_score import RiskScore
+from domain.entity.rule.Rule import Rule
 from domain.entity.vehicle import Vehicle
 import pendulum
 
 
-class VehicleProducedLastFiveYears:
+class VehicleProducedLastFiveYears(Rule):
     def execute(self, risk_analysis: RiskAnalysis):
         person = self.__get_person_from(risk_analysis=risk_analysis)
         risk_profile = self.__get_risk_profile_from(risk_analysis=risk_analysis)
 
         for asset in person.assets:
             if self.__is_vehicle(asset=asset) and self.__was_produced_last_five_years(asset.year_manufactured):
-                self.__add_points_to(risk_profile)
+                self.__add_points_to(risk_score=risk_profile.get_risk_score())
 
         return risk_analysis
 
@@ -30,6 +32,7 @@ class VehicleProducedLastFiveYears:
 
         return year_manufactured.year > five_years_ago.year
 
-    def __add_points_to(self, risk_profile):
-        vehicle = risk_profile.risk_score.product['vehicle']
-        vehicle.score = +1
+    def __add_points_to(self, risk_score: RiskScore):
+        auto = risk_score.get_product_by(risk_score, name='vehicle')
+        auto.add_score_points(1)
+

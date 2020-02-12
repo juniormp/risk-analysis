@@ -24,10 +24,10 @@ class TestUnderThirtyYearsOld(TestCase):
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 
-        self.assertEqual(-2, risk_analysis.risk_profile.risk_score.product['life'].score)
-        self.assertEqual(-2, risk_analysis.risk_profile.risk_score.product['disability'].score)
-        self.assertEqual(-2, risk_analysis.risk_profile.risk_score.product['home'].score)
-        self.assertEqual(-2, risk_analysis.risk_profile.risk_score.product['vehicle'].score)
+        self.assertEqual(-2, risk_analysis.get_products_in_risk_analysis()['life'].get_score())
+        self.assertEqual(-2, risk_analysis.get_products_in_risk_analysis()['disability'].get_score())
+        self.assertEqual(-2, risk_analysis.get_products_in_risk_analysis()['home'].get_score())
+        self.assertEqual(-2, risk_analysis.get_products_in_risk_analysis()['vehicle'].get_score())
 
     def test_product_score_is_not_deduct_in_2_when_person_is_over_thirty_years_old(self):
         person = self.person_builder.with_age(30).build()
@@ -35,7 +35,7 @@ class TestUnderThirtyYearsOld(TestCase):
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 
-        self.assertEqual(0, risk_analysis.risk_profile.risk_score.product['life'].score)
-        self.assertEqual(0, risk_analysis.risk_profile.risk_score.product['disability'].score)
-        self.assertEqual(0, risk_analysis.risk_profile.risk_score.product['home'].score)
-        self.assertEqual(0, risk_analysis.risk_profile.risk_score.product['vehicle'].score)
+        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()['life'].get_score())
+        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()['disability'].get_score())
+        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()['home'].get_score())
+        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()['vehicle'].get_score())

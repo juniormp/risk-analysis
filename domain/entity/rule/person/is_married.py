@@ -1,15 +1,16 @@
 from domain.entity.person import MARITAL_STATUS_MARRIED
 from domain.entity.risk_analysis import RiskAnalysis
-from domain.entity.risk_profile import RiskProfile
+from domain.entity.risk_score import RiskScore
+from domain.entity.rule.Rule import Rule
 
 
-class IsMarried:
+class IsMarried(Rule):
     def execute(self, risk_analysis: RiskAnalysis):
         person = self.__get_person_from(risk_analysis=risk_analysis)
         risk_profile = self.__get_risk_profile_from(risk_analysis=risk_analysis)
 
         if self.__is_married(person.marital_status):
-            self.__add_and_deduct_points_from(risk_profile=risk_profile)
+            self.__add_and_deduct_points_from(risk_score=risk_profile.risk_score)
 
         return risk_analysis
 
@@ -22,9 +23,9 @@ class IsMarried:
     def __is_married(self, marital_status: str):
         return marital_status == MARITAL_STATUS_MARRIED
 
-    def __add_and_deduct_points_from(self, risk_profile: RiskProfile):
-        life = risk_profile.risk_score.product['life']
-        life.score = +1
+    def __add_and_deduct_points_from(self, risk_score: RiskScore):
+        life = risk_score.get_product_by(risk_score, name='life')
+        life.add_score_points(1)
 
-        disability = risk_profile.risk_score.product['disability']
-        disability.score = -1
+        disability = risk_score.get_product_by(risk_score, name='disability')
+        disability.deduct_score_points(1)

@@ -25,10 +25,10 @@ class TestIsMarried(TestCase):
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 
-        self.assertEqual(+1, risk_analysis.risk_profile.risk_score.product['life'].score)
-        self.assertEqual(-1, risk_analysis.risk_profile.risk_score.product['disability'].score)
-        self.assertEqual(0, risk_analysis.risk_profile.risk_score.product['home'].score)
-        self.assertEqual(0, risk_analysis.risk_profile.risk_score.product['vehicle'].score)
+        self.assertEqual(+1, risk_analysis.get_products_in_risk_analysis()['life'].get_score())
+        self.assertEqual(-1, risk_analysis.get_products_in_risk_analysis()['disability'].get_score())
+        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()['home'].get_score())
+        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()['vehicle'].get_score())
 
     def test_product_score_is_not_add_in_1_and_not_deduct_in_1_when_person_is_single(self):
         person = self.person_builder.with_marital_status(MARITAL_STATUS_SINGLE).build()
@@ -36,7 +36,8 @@ class TestIsMarried(TestCase):
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 
-        self.assertEqual(0, risk_analysis.risk_profile.risk_score.product['life'].score)
-        self.assertEqual(0, risk_analysis.risk_profile.risk_score.product['disability'].score)
-        self.assertEqual(0, risk_analysis.risk_profile.risk_score.product['home'].score)
-        self.assertEqual(0, risk_analysis.risk_profile.risk_score.product['vehicle'].score)
+        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()['life'].get_score())
+        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()['disability'].get_score())
+        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()['home'].get_score())
+        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()['vehicle'].get_score())
+
