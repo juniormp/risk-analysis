@@ -8,26 +8,25 @@ from domain.entity.risk_profile import RiskProfile
 
 class RiskProfileBuilder:
     def __init__(self):
-        self.__risk_profile = RiskProfile
+        self.__risk_profile = RiskProfile(products={})
 
     def with_vehicle_product(self):
-        self.__risk_profile.set_product_into_list(name=VEHICLE_PRODUCT, product=VehicleProduct())
+        self.__risk_profile.set_product(name=VEHICLE_PRODUCT, product=VehicleProduct())
 
         return self
 
     def with_home_product(self):
-        self.__risk_profile.set_product_into_list(name=HOME_PRODUCT, product=HomeProduct())
+        self.__risk_profile.set_product(name=HOME_PRODUCT, product=HomeProduct())
 
         return self
 
     def with_life_product(self):
-        self.__risk_profile.set_product_into_list(name=LIFE_PRODUCT, product=LifeProduct())
+        self.__risk_profile.set_product(name=LIFE_PRODUCT, product=LifeProduct())
 
         return self
 
     def with_disability_product(self):
-        self.__risk_profile.set_product_into_list(name=DISABILITY_PRODUCT, product=DisabilityProduct())
-
+        self.__risk_profile.set_product(name=DISABILITY_PRODUCT, product=DisabilityProduct())
         return self
 
     def build(self):

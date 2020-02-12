@@ -2,15 +2,20 @@ from domain.entity.product.product import Product
 
 
 class RiskProfile:
+    products: {}
+
     def __init__(self, products: {}):
-        self._products = products
+        self.products = products
+
+    def set_product(self, name: str, product: Product):
+        self.products[name] = product
 
     def get_products(self):
-        return self._products
+        return self.products
+
+    def get_product_by(self, name: str):
+        return self.products[name]
 
     def __eq__(self, other):
         return isinstance(other, RiskProfile) and \
-               other._products == self._products
-
-    def set_product_into_list(self, product: Product, name: str):
-        self._products[name] = product
+               other.products == self.products
