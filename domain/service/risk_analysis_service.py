@@ -7,25 +7,22 @@ from array import array
 
 
 class RiskAnalysisService:
-    def __init__(self, risk_analysis_rules_factory: RiskAnalysisRulesFactory,
-                 product_status_builder: ProductStatusBuilder):
-        self.risk_analysis_rules_factory = risk_analysis_rules_factory
+    def __init__(self, product_status_builder: ProductStatusBuilder):
         self.product_status_builder = product_status_builder
 
-    def build_rules_list(self):
-        person_rules_list = self.risk_analysis_rules_factory.create_person_rules()
-        asset_rules_list = self.risk_analysis_rules_factory.create_asset_rules()
-        rules_list = [person_rules_list, asset_rules_list]
-
-        return rules_list
-
     def apply_rules_on(self, risk_analysis: RiskAnalysis, rules_list: array):
-        for rules in rules_list:
-            for rule in rules:
+        for product_rules in rules_list:
+            for rule in product_rules:
                 rule.execute(risk_analysis)
 
-    def foo(self, risk_score: RiskScore):
-        for key, value in risk_score.products.items():
-            for status in self.product_status_builder.build_product_status_list():
-                if status.apply_condition(value.score) and value.status != PRODUCT_SCORE_INELIGIBLE:
-                    value.update_status(status.name)
+    def execute_risk_analysis(self, risk_score: RiskScore):
+        for __, product in risk_score.products.items():
+            for status in self.__get_product_status():
+                if status.apply_condition(product.score) and self.__is_not_inelegible(product.status):
+                    product.update_status(status.name)
+
+    def __get_product_status(self):
+        return self.product_status_builder.build_product_status_list()
+
+    def __is_not_inelegible(self, status):
+        return status != PRODUCT_SCORE_INELIGIBLE

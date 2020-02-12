@@ -1,13 +1,11 @@
 from unittest import TestCase
 from unittest.mock import MagicMock
-
 from domain.entity.product.status.product_status_builder import ProductStatusBuilder
 from domain.entity.risk_analysis import RiskAnalysis
 from domain.entity.rule.asset.is_house_mortgaged import IsHouseMortgaged
 from domain.entity.rule.asset.is_vehicle_produced_last_five_years import VehicleProducedLastFiveYears
 from domain.entity.rule.person.has_dependents import HasDependents
 from domain.entity.rule.person.has_house import HasHouse
-from domain.factory.risk_analysis_rules_factory import RiskAnalysisRulesFactory
 from domain.service.risk_analysis_service import RiskAnalysisService
 
 
@@ -21,29 +19,11 @@ class TestRiskAnalysisService(TestCase):
         self.person_rules_list = [self.rule_has_house_mock, self.is_vehicle_produced_last_five_years]
         self.asset_rules_list = [self.rule_is_house_mortgaged_mock, self.has_dependents]
 
-    def test_should_build_rules_list(self):
-        person_rules_list_fake = ['person_rules_list_fake']
-        asset_rules_list_fake = ['asset_rules_list_fake']
-        risk_analysis_rules_factory_mock = MagicMock(autospec=RiskAnalysisRulesFactory)
-        product_status_builder = MagicMock(autospec=ProductStatusBuilder)
-        risk_analysis_service = RiskAnalysisService(
-            risk_analysis_rules_factory=risk_analysis_rules_factory_mock,
-            product_status_builder=product_status_builder
-        )
-        risk_analysis_rules_factory_mock.create_person_rules.return_value = person_rules_list_fake
-        risk_analysis_rules_factory_mock.create_asset_rules.return_value = asset_rules_list_fake
-
-        rules_list = risk_analysis_service.build_rules_list()
-
-        self.assertEqual([person_rules_list_fake, asset_rules_list_fake], rules_list)
-
     def test_execute_risk_analysis_using_rules_list(self):
-        risk_analysis_rules_factory_mock = MagicMock(autospec=RiskAnalysisRulesFactory)
         risk_analysis_mock = MagicMock(autospec=RiskAnalysis)
         rules_list_mock = [self.person_rules_list, self.asset_rules_list]
         product_status_builder = MagicMock(autospec=ProductStatusBuilder)
         risk_analysis_service = RiskAnalysisService(
-            risk_analysis_rules_factory=risk_analysis_rules_factory_mock,
             product_status_builder=product_status_builder
         )
 

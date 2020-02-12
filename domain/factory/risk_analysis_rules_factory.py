@@ -7,8 +7,11 @@ class RiskAnalysisRulesFactory:
         self.person_rules = person_rules
         self.asset_rules = asset_rules
 
-    def create_person_rules(self):
+    def build_rules_list(self):
+        return [self.__create_person_rules(), self.__create_asset_rules()]
+
+    def __create_person_rules(self):
         return self.person_rules.get_rules_list()
 
-    def create_asset_rules(self):
+    def __create_asset_rules(self):
         return self.asset_rules.get_rules_list()
