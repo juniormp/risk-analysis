@@ -3,9 +3,9 @@ from domain.entity.house import House
 from domain.entity.product.disability_product import DisabilityProduct
 from domain.entity.product.home_product import HomeProduct
 from domain.entity.product.life_product import LifeProduct
+from domain.entity.product.product import VEHICLE_PRODUCT, HOME_PRODUCT, LIFE_PRODUCT, DISABILITY_PRODUCT
 from domain.entity.risk_analysis import RiskAnalysis
 from domain.entity.risk_profile import RiskProfile
-from domain.entity.risk_score import RiskScore
 from domain.entity.vehicle import Vehicle
 from domain.entity.product.vehicle_product import VehicleProduct
 from domain.factory.risk_analysis_factory import RiskAnalysisFactory
@@ -38,11 +38,13 @@ class TestRiskAnalysisFactory(TestCase):
         self.home_product = HomeProduct()
         self.life_product = LifeProduct()
         self.disability_product = DisabilityProduct()
-        self.risk_score = RiskScore(
-            products=[self.vehicle_product, self.home_product, self.life_product, self.disability_product]
-        )
         self.risk_profile = RiskProfile(
-            risk_score=self.risk_score
+            products={
+                VEHICLE_PRODUCT: self.vehicle_product,
+                HOME_PRODUCT: self.home_product,
+                LIFE_PRODUCT: self.life_product,
+                DISABILITY_PRODUCT: self.disability_product
+            },
         )
         self.risk_analysis = RiskAnalysis(
             person=self.person,
