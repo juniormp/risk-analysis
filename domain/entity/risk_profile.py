@@ -11,7 +11,7 @@ class RiskProfile:
         self.products[name] = product
 
     def get_products(self):
-        return self.products
+        return self.products.items()
 
     def get_product_by(self, name: str):
         return self.products[name]
