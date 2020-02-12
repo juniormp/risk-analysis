@@ -48,4 +48,3 @@ class TestRiskAnalysisService(TestCase):
         self.is_vehicle_produced_last_five_years.execute.assert_called_once_with(risk_analysis_mock)
         self.rule_is_house_mortgaged_mock.execute.assert_called_once_with(risk_analysis_mock)
         self.has_dependents.execute.assert_called_once_with(risk_analysis_mock)
-        self.assertEqual(risk_analysis_mock, response)
