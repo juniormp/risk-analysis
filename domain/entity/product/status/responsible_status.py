@@ -5,5 +5,5 @@ class ResponsibleStatus(ProductStatus):
     def __init__(self):
         self.name = PRODUCT_STATUS_RESPONSIBLE
 
-    def set_condition(self, score: int):
-        return [score >= 3]
+    def apply_condition(self, score: int):
+        return score >= 3

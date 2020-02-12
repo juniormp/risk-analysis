@@ -9,5 +9,5 @@ class ProductStatus(ABC):
     name: str
 
     @abstractmethod
-    def set_condition(self, score: int):
+    def apply_condition(self, score: int):
         pass

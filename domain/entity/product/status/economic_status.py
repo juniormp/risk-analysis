@@ -5,5 +5,5 @@ class EconomicStatus(ProductStatus):
     def __init__(self):
         self.name = PRODUCT_STATUS_ECONOMIC
 
-    def set_condition(self, score: int):
-        return [score <= 0]
+    def apply_condition(self, score: int):
+        return score <= 0

@@ -3,8 +3,8 @@ from domain.entity.product.status.regular_status import RegularStatus
 from domain.entity.product.status.responsible_status import ResponsibleStatus
 
 
-class StatusBuilder:
-    def build_list_product_status(self):
+class ProductStatusBuilder:
+    def build_product_status_list(self):
         return [
             EconomicStatus(),
             RegularStatus(),
