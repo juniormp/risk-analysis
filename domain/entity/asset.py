@@ -2,5 +2,5 @@ from abc import ABC
 
 
 class Asset(ABC):
-    def has_asset(self):
-        return True
+    def __init__(self):
+        pass
