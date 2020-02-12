@@ -1,15 +1,21 @@
-from domain.entity.risk_score import RiskScore
+from domain.entity.product.product import Product
 
 
 class RiskProfile:
-    risk_score: RiskScore
+    products: {}
 
-    def __init__(self, risk_score: RiskScore):
-        self.risk_score = risk_score
+    def __init__(self, products: {}):
+        self.products = products
 
-    def get_risk_score(self):
-        return self.risk_score
+    def set_product(self, name: str, product: Product):
+        self.products[name] = product
+
+    def get_products(self):
+        return self.products
+
+    def get_product_by(self, name: str):
+        return self.products[name]
 
     def __eq__(self, other):
         return isinstance(other, RiskProfile) and \
-               other.risk_score == self.risk_score
+               other.products == self.products

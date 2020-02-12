@@ -5,7 +5,7 @@ class RiskScore:
         self.products = products
 
     def get_product_by(self, name: str):
-        return self.products.get(name)
+        return self.products[name]
 
     def __eq__(self, other):
         return isinstance(other, RiskScore) and \

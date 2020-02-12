@@ -1,5 +1,6 @@
+from domain.entity.product.product import DISABILITY_PRODUCT, LIFE_PRODUCT
 from domain.entity.risk_analysis import RiskAnalysis
-from domain.entity.risk_score import RiskScore
+from domain.entity.risk_profile import RiskProfile
 from domain.entity.rule.Rule import Rule
 
 
@@ -9,7 +10,7 @@ class HasDependents(Rule):
         risk_profile = self.__get_risk_profile_from(risk_analysis=risk_analysis)
 
         if self.__has_dependents(dependents=person.dependents):
-            self.__add_points_to(risk_score=risk_profile.get_risk_score())
+            self.__add_points_to(risk_profile=risk_profile)
 
         return risk_analysis
 
@@ -22,10 +23,10 @@ class HasDependents(Rule):
     def __has_dependents(self, dependents: int):
         return dependents > 0
 
-    def __add_points_to(self, risk_score: RiskScore):
-        disability = risk_score.get_product_by(risk_score, name='disability')
+    def __add_points_to(self, risk_profile: RiskProfile):
+        disability = risk_profile.get_product_by(name=DISABILITY_PRODUCT)
         disability.add_score_points(1)
 
-        life = risk_score.get_product_by(risk_score, name='life')
+        life = risk_profile.get_product_by(name=LIFE_PRODUCT)
         life.add_score_points(1)
 

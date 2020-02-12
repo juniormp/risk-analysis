@@ -3,10 +3,10 @@ from domain.entity.person import Person
 from domain.entity.product.disability_product import DisabilityProduct
 from domain.entity.product.home_product import HomeProduct
 from domain.entity.product.life_product import LifeProduct
+from domain.entity.product.product import VEHICLE_PRODUCT, HOME_PRODUCT, LIFE_PRODUCT, DISABILITY_PRODUCT
 from domain.entity.product.vehicle_product import VehicleProduct
 from domain.entity.risk_analysis import RiskAnalysis
 from domain.entity.risk_profile import RiskProfile
-from domain.entity.risk_score import RiskScore
 from domain.entity.vehicle import Vehicle
 
 
@@ -21,8 +21,7 @@ class RiskAnalysisFactory:
         life_product = LifeProduct()
         disability_product = DisabilityProduct()
 
-        risk_score = self.__create_risk_score(vehicle_product, home_product, life_product, disability_product)
-        risk_profile = self.__create_risk_profile(risk_score)
+        risk_profile = self.__create_risk_profile(vehicle_product, home_product, life_product, disability_product)
         risk_analysis = self.__create_risk_analysis(person, risk_profile)
 
         return risk_analysis
@@ -47,14 +46,14 @@ class RiskAnalysisFactory:
             assets=[house, vehicle]
         )
 
-    def __create_risk_score(self, vehicle_product, home_product, life_product, disability_product):
-        return RiskScore(
-            products=[vehicle_product, home_product, life_product, disability_product]
-        )
-
-    def __create_risk_profile(self, risk_score):
+    def __create_risk_profile(self, vehicle_product, home_product, life_product, disability_product):
         return RiskProfile(
-            risk_score=risk_score
+            products={
+                VEHICLE_PRODUCT: vehicle_product,
+                HOME_PRODUCT: home_product,
+                LIFE_PRODUCT: life_product,
+                DISABILITY_PRODUCT: disability_product
+            }
         )
 
     def __create_risk_analysis(self, person, risk_profile):

@@ -3,6 +3,7 @@ from domain.entity.risk_analysis import RiskAnalysis
 from domain.entity.rule.person.has_dependents import HasDependents
 from tests.person_builder import PersonBuilder
 from tests.risk_profile_builder import RiskProfileBuilder
+from domain.entity.product.product import DISABILITY_PRODUCT, HOME_PRODUCT, LIFE_PRODUCT, VEHICLE_PRODUCT
 
 
 class TestHasDependents(TestCase):
@@ -24,10 +25,10 @@ class TestHasDependents(TestCase):
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 
-        self.assertEqual(+1, risk_analysis.get_products_in_risk_analysis()['life'].get_score())
-        self.assertEqual(+1, risk_analysis.get_products_in_risk_analysis()['disability'].get_score())
-        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()['home'].get_score())
-        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()['vehicle'].get_score())
+        self.assertEqual(+1, risk_analysis.get_products_in_risk_analysis()[DISABILITY_PRODUCT].get_score())
+        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()[HOME_PRODUCT].get_score())
+        self.assertEqual(+1, risk_analysis.get_products_in_risk_analysis()[LIFE_PRODUCT].get_score())
+        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()[VEHICLE_PRODUCT].get_score())
 
     def test_product_score_is_not_add_in_1_when_person_has_not_dependents(self):
         person = self.person_builder.with_dependents(0).build()
@@ -35,7 +36,7 @@ class TestHasDependents(TestCase):
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 
-        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()['life'].get_score())
-        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()['disability'].get_score())
-        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()['home'].get_score())
-        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()['vehicle'].get_score())
+        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()[DISABILITY_PRODUCT].get_score())
+        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()[HOME_PRODUCT].get_score())
+        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()[LIFE_PRODUCT].get_score())
+        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()[VEHICLE_PRODUCT].get_score())

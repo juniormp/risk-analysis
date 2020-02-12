@@ -7,31 +7,36 @@ PRODUCT_SCORE_DEFAULT = 'default'
 PRODUCT_SCORE_INELIGIBLE = 'ineligible'
 PRODUCT_SCORE = [PRODUCT_SCORE_ECONOMIC, PRODUCT_SCORE_ECONOMIC, PRODUCT_SCORE_RESPONSIBLE]
 
+VEHICLE_PRODUCT = 'vehicle'
+HOME_PRODUCT = 'home'
+LIFE_PRODUCT = 'life'
+DISABILITY_PRODUCT = 'disability'
+
 
 class Product(ABC):
     status: str
-    score: int
+    risk_score: int
 
-    def __init__(self, status, score):
+    def __init__(self, status, risk_score):
         self.status = status
-        self.score = score
+        self.risk_score = risk_score
 
     def add_score_points(self, quantity: int):
-        self.score = self.score + quantity
+        self.risk_score = self.risk_score + quantity
 
     def deduct_score_points(self, quantity: int):
-        self.score = self.score - quantity
+        self.risk_score = self.risk_score - quantity
 
     def update_status(self, status: str):
         self.status = status
 
     def get_score(self):
-        return self.score
+        return self.risk_score
 
     def get_status(self):
         return self.status
 
     def __eq__(self, other):
         return isinstance(other, Product) and \
-               other.score == self.score and \
+               other.risk_score == self.risk_score and \
                other.status == self.status

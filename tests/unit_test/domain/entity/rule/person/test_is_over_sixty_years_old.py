@@ -4,6 +4,7 @@ from domain.entity.risk_analysis import RiskAnalysis
 from domain.entity.rule.person.is_over_sixty_years_old import IsOverSixtyYearsOld
 from tests.person_builder import PersonBuilder
 from tests.risk_profile_builder import RiskProfileBuilder
+from domain.entity.product.product import DISABILITY_PRODUCT, HOME_PRODUCT, LIFE_PRODUCT, VEHICLE_PRODUCT
 
 
 class TestIsOverSixtyYearsOld(TestCase):
@@ -25,10 +26,10 @@ class TestIsOverSixtyYearsOld(TestCase):
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 
-        self.assertEqual(PRODUCT_SCORE_INELIGIBLE, risk_analysis.get_products_in_risk_analysis()['disability'].get_status())
-        self.assertEqual(PRODUCT_SCORE_INELIGIBLE, risk_analysis.get_products_in_risk_analysis()['life'].get_status())
-        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.get_products_in_risk_analysis()['vehicle'].get_status())
-        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.get_products_in_risk_analysis()['home'].get_status())
+        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.get_products_in_risk_analysis()[HOME_PRODUCT].get_status())
+        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.get_products_in_risk_analysis()[VEHICLE_PRODUCT].get_status())
+        self.assertEqual(PRODUCT_SCORE_INELIGIBLE, risk_analysis.get_products_in_risk_analysis()[LIFE_PRODUCT].get_status())
+        self.assertEqual(PRODUCT_SCORE_INELIGIBLE, risk_analysis.get_products_in_risk_analysis()[DISABILITY_PRODUCT].get_status())
 
     def test_product_score_is_default_when_person_is_under_sixty_years_old(self):
         person = self.person_builder.with_age(60).build()
@@ -36,7 +37,7 @@ class TestIsOverSixtyYearsOld(TestCase):
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 
-        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.get_products_in_risk_analysis()['disability'].get_status())
-        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.get_products_in_risk_analysis()['vehicle'].get_status())
-        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.get_products_in_risk_analysis()['life'].get_status())
-        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.get_products_in_risk_analysis()['home'].get_status())
+        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.get_products_in_risk_analysis()[HOME_PRODUCT].get_status())
+        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.get_products_in_risk_analysis()[VEHICLE_PRODUCT].get_status())
+        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.get_products_in_risk_analysis()[LIFE_PRODUCT].get_status())
+        self.assertEqual(PRODUCT_SCORE_DEFAULT, risk_analysis.get_products_in_risk_analysis()[DISABILITY_PRODUCT].get_status())
