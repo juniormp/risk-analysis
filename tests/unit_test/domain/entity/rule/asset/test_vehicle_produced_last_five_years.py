@@ -1,6 +1,7 @@
 from django.test import TestCase
 from domain.entity.risk_analysis import RiskAnalysis
 from domain.entity.rule.asset.is_vehicle_produced_last_five_years import VehicleProducedLastFiveYears
+from domain.entity.product.product import DISABILITY_PRODUCT, HOME_PRODUCT, LIFE_PRODUCT, VEHICLE_PRODUCT
 from domain.entity.vehicle import Vehicle
 from freezegun import freeze_time
 from tests.person_builder import PersonBuilder
@@ -29,10 +30,10 @@ class TestVehicleProducedLastFiveYears(TestCase):
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 
-        self.assertEqual(+1, risk_analysis.get_products_in_risk_analysis()['vehicle'].get_score())
-        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()['disability'].get_score())
-        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()['home'].get_score())
-        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()['life'].get_score())
+        self.assertEqual(+1, risk_analysis.get_products_in_risk_analysis()[VEHICLE_PRODUCT].get_score())
+        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()[DISABILITY_PRODUCT].get_score())
+        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()[HOME_PRODUCT].get_score())
+        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()[LIFE_PRODUCT].get_score())
 
     @freeze_time("2020-01-01")
     def test_product_score_is_not_add_in_1_when_vehicle_was_produced_last_5_years(self):
@@ -43,7 +44,7 @@ class TestVehicleProducedLastFiveYears(TestCase):
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 
-        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()['vehicle'].get_score())
-        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()['disability'].get_score())
-        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()['home'].get_score())
-        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()['life'].get_score())
+        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()[DISABILITY_PRODUCT].get_score())
+        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()[HOME_PRODUCT].get_score())
+        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()[LIFE_PRODUCT].get_score())
+        self.assertEqual(0, risk_analysis.get_products_in_risk_analysis()[VEHICLE_PRODUCT].get_score())

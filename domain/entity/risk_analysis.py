@@ -11,7 +11,7 @@ class RiskAnalysis:
         self.risk_profile = risk_profile
 
     def get_products_in_risk_analysis(self):
-        return self.risk_profile.risk_score.products
+        return self.risk_profile.get_products()
 
     def __eq__(self, other):
         return isinstance(other, RiskAnalysis) and \
