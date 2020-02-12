@@ -7,6 +7,9 @@ class RiskProfile:
     def __init__(self, risk_score: RiskScore):
         self.risk_score = risk_score
 
+    def get_risk_score(self):
+        return self.risk_score
+
     def __eq__(self, other):
         return isinstance(other, RiskProfile) and \
                other.risk_score == self.risk_score

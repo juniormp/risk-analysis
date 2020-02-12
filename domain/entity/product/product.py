@@ -22,11 +22,14 @@ class Product(ABC):
     def deduct_score_points(self, quantity: int):
         self.score = self.score - quantity
 
-    def update_score_status(self, status: str):
+    def update_status(self, status: str):
         self.status = status
 
     def get_score(self):
         return self.score
+
+    def get_status(self):
+        return self.status
 
     def __eq__(self, other):
         return isinstance(other, Product) and \
