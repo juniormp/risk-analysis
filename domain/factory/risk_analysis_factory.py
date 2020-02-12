@@ -49,7 +49,7 @@ class RiskAnalysisFactory:
 
     def __create_risk_score(self, vehicle_product, home_product, life_product, disability_product):
         return RiskScore(
-            product=[vehicle_product, home_product, life_product, disability_product]
+            products=[vehicle_product, home_product, life_product, disability_product]
         )
 
     def __create_risk_profile(self, risk_score):

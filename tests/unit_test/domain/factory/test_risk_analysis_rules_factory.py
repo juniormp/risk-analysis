@@ -18,7 +18,7 @@ class TestRiskAnalysisRulesFactory(TestCase):
 
         response = risk_analysis_rules_factory.create_person_rules()
 
-        self.assertEqual(person_rules_expected, response.return_value)
+        self.assertEqual(person_rules_expected, response)
 
     def test_retrieve_asset_rules_list(self):
         asset_rules_expected = ['fake_asset_rules']
@@ -32,5 +32,5 @@ class TestRiskAnalysisRulesFactory(TestCase):
 
         response = risk_analysis_rules_factory.create_asset_rules()
 
-        self.assertEqual(asset_rules_expected, response.return_value)
+        self.assertEqual(asset_rules_expected, response)
 

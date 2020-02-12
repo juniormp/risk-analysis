@@ -39,7 +39,7 @@ class TestRiskAnalysisFactory(TestCase):
         self.life_product = LifeProduct()
         self.disability_product = DisabilityProduct()
         self.risk_score = RiskScore(
-            product=[self.vehicle_product, self.home_product, self.life_product, self.disability_product]
+            products=[self.vehicle_product, self.home_product, self.life_product, self.disability_product]
         )
         self.risk_profile = RiskProfile(
             risk_score=self.risk_score
