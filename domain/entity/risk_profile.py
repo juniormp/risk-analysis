@@ -1,7 +1,10 @@
-class RiskProfile:
-    risk_score = None
+from domain.entity.risk_score import RiskScore
 
-    def __init__(self, risk_score):
+
+class RiskProfile:
+    risk_score: RiskScore
+
+    def __init__(self, risk_score: RiskScore):
         self.risk_score = risk_score
 
     def __eq__(self, other):

@@ -3,12 +3,15 @@ from domain.entity.risk_profile import RiskProfile
 
 
 class RiskAnalysis:
-    person = None
-    risk_profile = None
+    person: Person
+    risk_profile: RiskProfile
 
-    def __init__(self, person=Person, risk_profile=RiskProfile):
+    def __init__(self, person: Person, risk_profile: RiskProfile):
         self.person = person
         self.risk_profile = risk_profile
+
+    def get_products_in_risk_analysis(self):
+        return self.risk_profile.risk_score.products
 
     def __eq__(self, other):
         return isinstance(other, RiskAnalysis) and \
