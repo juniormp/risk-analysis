@@ -20,4 +20,4 @@ class TestRiskAnalysisRulesFactory(TestCase):
 
         response = risk_analysis_rules_factory.build_rules_list()
 
-        self.assertEqual([person_rules_expected, asset_rules_expected], response)
+        self.assertEqual(person_rules_expected + asset_rules_expected, response)
