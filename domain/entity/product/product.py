@@ -25,6 +25,9 @@ class Product(ABC):
     def update_score_status(self, status: str):
         self.status = status
 
+    def get_score(self):
+        return self.score
+
     def __eq__(self, other):
         return isinstance(other, Product) and \
                other.score == self.score and \
