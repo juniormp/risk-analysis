@@ -38,6 +38,7 @@ class TestRiskAnalysisFactory(TestCase):
         self.home_product = HomeProduct()
         self.life_product = LifeProduct()
         self.disability_product = DisabilityProduct()
+
         self.risk_profile = RiskProfile(
             products={
                 VEHICLE_PRODUCT: self.vehicle_product,

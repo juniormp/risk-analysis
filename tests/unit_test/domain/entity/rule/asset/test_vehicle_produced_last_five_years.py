@@ -6,7 +6,6 @@ from domain.entity.vehicle import Vehicle
 from freezegun import freeze_time
 from tests.person_builder import PersonBuilder
 from tests.risk_profile_builder import RiskProfileBuilder
-import datetime
 
 
 class TestVehicleProducedLastFiveYears(TestCase):
@@ -24,7 +23,7 @@ class TestVehicleProducedLastFiveYears(TestCase):
 
     @freeze_time("2020-01-01")
     def test_product_score_is_add_in_1_when_vehicle_was_produced_last_5_years(self):
-        vehicle = Vehicle(year_manufactured=datetime.datetime(2015, 1, 1))
+        vehicle = Vehicle(year_manufactured=2015)
         person = self.person_builder.with_asset(asset=vehicle).build()
         risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)
 
@@ -37,7 +36,7 @@ class TestVehicleProducedLastFiveYears(TestCase):
 
     @freeze_time("2020-01-01")
     def test_product_score_is_not_add_in_1_when_vehicle_was_produced_last_5_years(self):
-        vehicle = Vehicle(year_manufactured=datetime.datetime(2013, 12, 31))
+        vehicle = Vehicle(year_manufactured=2013)
         self.person_builder.person.assets = []
         person = self.person_builder.with_asset(asset=vehicle).build()
         risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)

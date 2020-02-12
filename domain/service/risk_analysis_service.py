@@ -24,3 +24,6 @@ class RiskAnalysisService:
 
     def __is_not_inelegible(self, status):
         return status != PRODUCT_SCORE_INELIGIBLE
+
+    def fluub(self):
+        return 100
