@@ -2,7 +2,6 @@ from domain.entity.product.product import PRODUCT_SCORE_INELIGIBLE
 from domain.entity.product.status.product_status_builder import ProductStatusBuilder
 from domain.entity.risk_analysis import RiskAnalysis
 from domain.entity.risk_score import RiskScore
-from domain.factory.risk_analysis_rules_factory import RiskAnalysisRulesFactory
 from array import array
 
 
@@ -11,9 +10,8 @@ class RiskAnalysisService:
         self.product_status_builder = product_status_builder
 
     def apply_rules_on(self, risk_analysis: RiskAnalysis, rules_list: array):
-        for product_rules in rules_list:
-            for rule in product_rules:
-                rule.execute(risk_analysis)
+        for rule in rules_list:
+            rule.execute(risk_analysis)
 
     def execute_risk_analysis(self, risk_score: RiskScore):
         for __, product in risk_score.products.items():
