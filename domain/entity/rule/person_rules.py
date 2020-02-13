@@ -12,13 +12,13 @@ from domain.entity.rule.person.under_thirty_years_old import UnderThirtyYearsOld
 class PersonRules:
     def get_rules_list(self):
         return [
+            HasIncome(),
+            HasVehicle(),
+            HasHouse(),
+            IsOverSixtyYearsOld(),
             IsMarried(),
             BetweenThirtyAndFortyYearsOld(),
-            HasHouse(),
-            HasIncome(),
             HasIncomeAboveTwoHundred(),
-            HasVehicle(),
-            IsOverSixtyYearsOld(),
             HasDependents(),
             UnderThirtyYearsOld()
         ]

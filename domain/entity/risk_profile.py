@@ -23,7 +23,7 @@ class RiskProfile:
     def to_array(self):
         return {
             VEHICLE_PRODUCT: self.get_product_by(VEHICLE_PRODUCT).get_status(),
-            DISABILITY_PRODUCT: self.get_product_by(VEHICLE_PRODUCT).get_status(),
-            HOME_PRODUCT: self.get_product_by(VEHICLE_PRODUCT).get_status(),
-            LIFE_PRODUCT: self.get_product_by(VEHICLE_PRODUCT).get_status()
+            DISABILITY_PRODUCT: self.get_product_by(DISABILITY_PRODUCT).get_status(),
+            HOME_PRODUCT: self.get_product_by(HOME_PRODUCT).get_status(),
+            LIFE_PRODUCT: self.get_product_by(LIFE_PRODUCT).get_status()
         }
