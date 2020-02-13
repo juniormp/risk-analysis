@@ -12,13 +12,13 @@ from domain.entity.vehicle import Vehicle
 
 class RiskAnalysisFactory:
     def create_risk_analysis_from(self, user_information):
-        house = None
-        vehicle = None
+        house = user_information['house']
+        vehicle = user_information['vehicle']
 
-        if user_information['house']['ownership_status'] is not None:
+        if house is not None:
             house = self.__create_house(user_information['house']['ownership_status'])
 
-        if user_information['vehicle']['year'] is not None:
+        if vehicle is not None:
             vehicle = self.__create_vehicle(user_information['vehicle']['year'])
 
         person = self.__create_person(user_information, house, vehicle)
