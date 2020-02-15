@@ -15,7 +15,7 @@ class TestIntegrationRiskAnalysisUseCase(TestCase):
             "income": 200,
             "marital_status": "married",
             "risk_question": [0, 1, 1],
-            "vehicle": {"year": "2018"}
+            "vehicle": {"year": 2018}
         }
 
         risk_analysis_use_case = RiskAnalysisUseCase(risk_analysis_service=ServiceRegistry.service_risk_analysis(),
@@ -46,7 +46,7 @@ class TestIntegrationRiskAnalysisUseCase(TestCase):
             "income": 0,
             "marital_status": "married",
             "risk_question": [0, 1, 1],
-            "vehicle": {"year": "2018"}
+            "vehicle": {"year": 2018}
         }
 
         risk_analysis_use_case = RiskAnalysisUseCase(risk_analysis_service=ServiceRegistry.service_risk_analysis(),

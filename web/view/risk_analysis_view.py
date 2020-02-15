@@ -18,7 +18,7 @@ class RiskAnalysisView(APIView):
         user_information = self.__user_information_serializer(data=request.data)
 
         if user_information.is_valid():
-            print(user_information.data)
+
             response = self.__risk_analysis_use_case.execute(user_information.data)
             return Response(response.to_array(), status=status.HTTP_200_OK)
         else:
