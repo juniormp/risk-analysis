@@ -19,6 +19,3 @@ class RiskAnalysisUseCase(AbstractUseCase):
         risk_profile = self.__risk_analysis_service.get_result_from(risk_analysis.risk_profile)
 
         return risk_profile
-
-
-

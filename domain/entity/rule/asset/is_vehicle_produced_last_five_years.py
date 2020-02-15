@@ -1,12 +1,11 @@
+from datetime import datetime
+from dateutil.relativedelta import relativedelta
 from domain.entity.asset import Asset
 from domain.entity.product.product import VEHICLE_PRODUCT
 from domain.entity.risk_analysis import RiskAnalysis
 from domain.entity.risk_profile import RiskProfile
 from domain.entity.rule.Rule import Rule
 from domain.entity.vehicle import Vehicle
-import pendulum
-
-from infrastructure.date_time_helper import DateTimeHelper
 
 
 class VehicleProducedLastFiveYears(Rule):
@@ -29,13 +28,11 @@ class VehicleProducedLastFiveYears(Rule):
     def __is_vehicle(self, asset: Asset):
         return type(asset) == Vehicle
 
-    def __was_produced_last_five_years(self, year_manufactured: pendulum.datetime):
-        five_years_ago = DateTimeHelper.subtract_years(years=5)
-        date = DateTimeHelper.str_to_date_time(date=year_manufactured)
+    def __was_produced_last_five_years(self, year_manufactured: int):
+        five_years_ago = datetime.now() - relativedelta(years=5)
 
-        return date > five_years_ago
+        return year_manufactured >= int(five_years_ago.strftime('%Y'))
 
     def __add_points_to(self, risk_profile: RiskProfile):
         vehicle = risk_profile.get_product_by(name=VEHICLE_PRODUCT)
         vehicle.add_score_points(1)
-
