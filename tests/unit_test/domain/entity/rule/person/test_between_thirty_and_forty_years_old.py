@@ -21,7 +21,7 @@ class TestUnderThirtyYearsOld(TestCase):
 
     def test_is_truly_when_person_is_between_thirty_and_forty_years_old(self):
         person = self.person_builder.with_age(40).build()
-        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)
+        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile, rules_list=None)
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 
@@ -32,9 +32,9 @@ class TestUnderThirtyYearsOld(TestCase):
 
     def test_is_falsely_when_person_is_not_between_thirty_and_forty_years_old(self):
         she = self.person_builder.with_age(29).build()
-        risk_analysis_she = RiskAnalysis(person=she, risk_profile=self.risk_profile)
+        risk_analysis_she = RiskAnalysis(person=she, risk_profile=self.risk_profile, rules_list=None)
         he = self.person_builder.with_age(41).build()
-        risk_analysis_he = RiskAnalysis(person=he, risk_profile=self.risk_profile)
+        risk_analysis_he = RiskAnalysis(person=he, risk_profile=self.risk_profile, rules_list=None)
 
         risk_analysis_she = self.rule.execute(risk_analysis=risk_analysis_she)
         risk_analysis_he = self.rule.execute(risk_analysis=risk_analysis_he)

@@ -22,7 +22,7 @@ class TestIsMarried(TestCase):
 
     def test_product_score_is_add_in_1_and_deduct_in_1_when_person_is_married(self):
         person = self.person_builder.with_marital_status(MARITAL_STATUS_MARRIED).build()
-        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)
+        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile, rules_list=None)
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 
@@ -33,7 +33,7 @@ class TestIsMarried(TestCase):
 
     def test_product_score_is_not_add_in_1_and_not_deduct_in_1_when_person_is_single(self):
         person = self.person_builder.with_marital_status(MARITAL_STATUS_SINGLE).build()
-        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)
+        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile, rules_list=None)
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 

@@ -10,8 +10,7 @@ from web.serializer.user_information_serializer import UserInformationSerializer
 class RiskAnalysisView(APIView):
     def __init__(self):
         self.__risk_analysis_use_case = RiskAnalysisUseCase(ServiceRegistry.service_risk_analysis(),
-                                                            ServiceRegistry.factory_risk_analysis(),
-                                                            ServiceRegistry.factory_risk_analysis_rules())
+                                                            ServiceRegistry.factory_risk_analysis())
         self.__user_information_serializer = UserInformationSerializer
 
     def post(self, request):

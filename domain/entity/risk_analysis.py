@@ -17,6 +17,9 @@ class RiskAnalysis:
     def get_products_in_risk_analysis(self):
         return self.risk_profile.get_products()
 
+    def get_rules_list(self):
+        return self.rules_list
+
     def __eq__(self, other):
         return isinstance(other, RiskAnalysis) and \
                other.person == self.person and \

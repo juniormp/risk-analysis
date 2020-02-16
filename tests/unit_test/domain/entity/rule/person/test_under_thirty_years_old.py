@@ -21,7 +21,7 @@ class TestUnderThirtyYearsOld(TestCase):
 
     def test_product_score_is_deduct_in_2_when_person_is_under_thirty_years_old(self):
         person = self.person_builder.with_age(29).build()
-        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)
+        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile, rules_list=None)
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 
@@ -32,7 +32,7 @@ class TestUnderThirtyYearsOld(TestCase):
 
     def test_product_score_is_not_deduct_in_2_when_person_is_over_thirty_years_old(self):
         person = self.person_builder.with_age(30).build()
-        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)
+        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile, rules_list=None)
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 

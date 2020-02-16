@@ -19,20 +19,20 @@ class TestRiskAnalysisService(TestCase):
 
         self.person_rules_list = [self.rule_has_house_mock, self.is_vehicle_produced_last_five_years]
         self.asset_rules_list = [self.rule_is_house_mortgaged_mock, self.has_dependents]
+        self.rules_list_mock = self.person_rules_list + self.asset_rules_list
 
         self.risk_profile = RiskProfileBuilder().with_vehicle_product().with_life_product()\
             .with_home_product().with_disability_product().build()
 
     def test_execute_risk_analysis_applying_rules_list(self):
         risk_analysis_mock = MagicMock(autospec=RiskAnalysis)
-        rules_list_mock = self.person_rules_list + self.asset_rules_list
         product_status_builder = MagicMock(autospec=ProductStatusBuilder)
         risk_analysis_service = RiskAnalysisService(
             product_status_builder=product_status_builder
         )
+        risk_analysis_mock.get_rules_list.return_value = self.rules_list_mock
 
-        risk_analysis_service.apply_rules_on(rules_list=rules_list_mock,
-                                             risk_analysis=risk_analysis_mock)
+        risk_analysis_service.apply_rules_on(risk_analysis=risk_analysis_mock)
 
         self.rule_has_house_mock.execute.assert_called_once_with(risk_analysis_mock)
         self.is_vehicle_produced_last_five_years.execute.assert_called_once_with(risk_analysis_mock)

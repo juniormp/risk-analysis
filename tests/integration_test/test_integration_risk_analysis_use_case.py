@@ -19,7 +19,6 @@ class TestIntegrationRiskAnalysisUseCase(TestCase):
         }
 
         risk_analysis_use_case = RiskAnalysisUseCase(risk_analysis_service=ServiceRegistry.service_risk_analysis(),
-                                                     risk_analysis_rules_factory=ServiceRegistry.factory_risk_analysis_rules(),
                                                      risk_analysis_factory=ServiceRegistry.factory_risk_analysis())
 
         risk_profile = risk_analysis_use_case.execute(user_information=user_information)
@@ -50,7 +49,6 @@ class TestIntegrationRiskAnalysisUseCase(TestCase):
         }
 
         risk_analysis_use_case = RiskAnalysisUseCase(risk_analysis_service=ServiceRegistry.service_risk_analysis(),
-                                                     risk_analysis_rules_factory=ServiceRegistry.factory_risk_analysis_rules(),
                                                      risk_analysis_factory=ServiceRegistry.factory_risk_analysis())
 
         risk_profile = risk_analysis_use_case.execute(user_information=user_information)

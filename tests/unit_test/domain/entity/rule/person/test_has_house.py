@@ -24,7 +24,7 @@ class TestHasHouse(TestCase):
 
     def test_home_product_status_is_ineligible_when_person_has_no_house(self):
         person = self.person_builder.build()
-        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)
+        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile, rules_list=None)
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 
@@ -36,7 +36,7 @@ class TestHasHouse(TestCase):
     def test_home_product_status_is_default_when_person_has_house(self):
         house = House(ownership_status=OWNERSHIP_STATUS_OWNED)
         person = self.person_builder.with_asset(asset=house).build()
-        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)
+        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile, rules_list=None)
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 

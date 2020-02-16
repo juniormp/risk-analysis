@@ -32,7 +32,7 @@ class RiskAnalysisFactory:
         disability_product = DisabilityProduct()
 
         risk_profile = self.__create_risk_profile(vehicle_product, home_product, life_product, disability_product)
-        rules_list = self.__create_rules_list
+        rules_list = self.__create_rules_list()
 
         risk_analysis = self.__create_risk_analysis(person, risk_profile, rules_list)
 
@@ -75,5 +75,5 @@ class RiskAnalysisFactory:
             rules_list=rules_list
         )
 
-    def __create_rules_list():
+    def __create_rules_list(self):
         return RiskAnalysisRulesFactory(PersonRules(), AssetRules()).build_rules_list()

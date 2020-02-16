@@ -9,8 +9,8 @@ class RiskAnalysisService:
     def __init__(self, product_status_builder: ProductStatusBuilder):
         self.product_status_builder = product_status_builder
 
-    def apply_rules_on(self, risk_analysis: RiskAnalysis, rules_list: array):
-        for rule in rules_list:
+    def apply_rules_on(self, risk_analysis: RiskAnalysis):
+        for rule in risk_analysis.get_rules_list():
             rule.execute(risk_analysis)
 
     def get_result_from(self, risk_profile: RiskProfile):

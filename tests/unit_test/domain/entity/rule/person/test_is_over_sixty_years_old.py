@@ -22,7 +22,7 @@ class TestIsOverSixtyYearsOld(TestCase):
 
     def test_product_score_is_ineligible_when_person_is_over_sixty_years_old(self):
         person = self.person_builder.with_age(61).build()
-        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)
+        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile, rules_list=None)
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 
@@ -33,7 +33,7 @@ class TestIsOverSixtyYearsOld(TestCase):
 
     def test_product_score_is_default_when_person_is_under_sixty_years_old(self):
         person = self.person_builder.with_age(60).build()
-        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)
+        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile, rules_list=None)
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 

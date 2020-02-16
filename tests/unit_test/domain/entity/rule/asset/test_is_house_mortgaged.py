@@ -23,7 +23,7 @@ class TestIsHouseMortgaged(TestCase):
     def test_product_score_is_add_in_1_when_house_is_mortgaged(self):
         house = House(ownership_status=OWNERSHIP_STATUS_MORTGAGED)
         person = self.person_builder.with_asset(asset=house).build()
-        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)
+        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile, rules_list=None)
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 
@@ -36,7 +36,7 @@ class TestIsHouseMortgaged(TestCase):
         house = House(ownership_status=OWNERSHIP_STATUS_OWNED)
         self.person_builder.person.assets = []
         person = self.person_builder.with_asset(asset=house).build()
-        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)
+        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile, rules_list=None)
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 

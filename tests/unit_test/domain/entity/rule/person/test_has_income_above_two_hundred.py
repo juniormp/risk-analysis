@@ -21,7 +21,7 @@ class TestHasIncomeAboveTwoHundred(TestCase):
 
     def test_product_score_is_deduct_in_1_when_person_has_income_above_two_hundred(self):
         person = self.person_builder.with_income(201.00).build()
-        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)
+        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile, rules_list=None)
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 
@@ -32,7 +32,7 @@ class TestHasIncomeAboveTwoHundred(TestCase):
 
     def test_product_score_is_not_deduct_in_1_when_person_has_income_bellow_two_hundred(self):
         person = self.person_builder.with_income(200.00).build()
-        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)
+        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile, rules_list=None)
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 

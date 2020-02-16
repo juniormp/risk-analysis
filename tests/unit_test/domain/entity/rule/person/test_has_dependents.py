@@ -21,7 +21,7 @@ class TestHasDependents(TestCase):
 
     def test_product_score_is_add_in_1_when_person_has_dependents(self):
         person = self.person_builder.with_dependents(1).build()
-        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)
+        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile, rules_list=None)
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 
@@ -32,7 +32,7 @@ class TestHasDependents(TestCase):
 
     def test_product_score_is_not_add_in_1_when_person_has_not_dependents(self):
         person = self.person_builder.with_dependents(0).build()
-        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile)
+        risk_analysis = RiskAnalysis(person=person, risk_profile=self.risk_profile, rules_list=None)
 
         risk_analysis = self.rule.execute(risk_analysis=risk_analysis)
 
