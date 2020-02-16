@@ -7,7 +7,10 @@ from domain.entity.product.product import VEHICLE_PRODUCT, HOME_PRODUCT, LIFE_PR
 from domain.entity.product.vehicle_product import VehicleProduct
 from domain.entity.risk_analysis import RiskAnalysis
 from domain.entity.risk_profile import RiskProfile
+from domain.entity.rule.asset_rules import AssetRules
+from domain.entity.rule.person_rules import PersonRules
 from domain.entity.vehicle import Vehicle
+from domain.factory.risk_analysis_rules_factory import RiskAnalysisRulesFactory
 
 
 class RiskAnalysisFactory:
@@ -29,22 +32,21 @@ class RiskAnalysisFactory:
         disability_product = DisabilityProduct()
 
         risk_profile = self.__create_risk_profile(vehicle_product, home_product, life_product, disability_product)
-        risk_analysis = self.__create_risk_analysis(person, risk_profile)
+        rules_list = self.__create_rules_list
+
+        risk_analysis = self.__create_risk_analysis(person, risk_profile, rules_list)
 
         return risk_analysis
-
 
     def __create_house(self, ownership_status):
         return House(
             ownership_status=ownership_status
         )
 
-
     def __create_vehicle(self, year_manufactured):
         return Vehicle(
             year_manufactured=year_manufactured
         )
-
 
     def __create_person(self, user_information, house, vehicle):
         return Person(
@@ -56,7 +58,6 @@ class RiskAnalysisFactory:
             assets=[house, vehicle]
         )
 
-
     def __create_risk_profile(self, vehicle_product, home_product, life_product, disability_product):
         return RiskProfile(
             products={
@@ -67,9 +68,12 @@ class RiskAnalysisFactory:
             }
         )
 
-
-    def __create_risk_analysis(self, person, risk_profile):
+    def __create_risk_analysis(self, person, risk_profile, rules_list):
         return RiskAnalysis(
             person=person,
-            risk_profile=risk_profile
+            risk_profile=risk_profile,
+            rules_list=rules_list
         )
+
+    def __create_rules_list():
+        return RiskAnalysisRulesFactory(PersonRules(), AssetRules()).build_rules_list()
